@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UzoUSSD</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Orange underline animation */
+    .nav-link {
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background-color: #f97316; /* Tailwind orange-500 */
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+
+  <!-- NAVBAR -->
+  <header class="w-full border-b bg-white">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="#" class="text-2xl font-bold text-gray-800">Uzo</a>
+
+      <div class="flex items-center gap-10">
+        
+        <!-- Nav Links -->
+        <nav class="hidden md:flex gap-5 font-semibold text-gray-800">
+          <a href="" class="nav-link active">Home</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="faq.html" class="nav-link">FAQ</a>
+          <a href="contact.html" class="nav-link">Contact Us</a>
+        </nav>
+
+        <!-- Divider Line -->
+        <div class="hidden md:block h-6 border-l border-gray-200"></div>
+
+        <!-- Buttons -->
+        <div class="hidden md:flex items-center gap-4 font-semibold">
+          <a href="#" class="text-orange-500 hover:text-orange-600">Log in</a>
+          <a href="#" class="bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-600 transition">Get Started</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden flex-col items-start px-6 pb-4 space-y-3 font-semibold text-gray-800 md:hidden">
+      <a href="home" class="nav-link active">Home</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+      <div class="flex flex-col gap-3 mt-2 w-full">
+        <a href="#" class="text-orange-500 font-semibold">Log in</a>
+        <a href="#" class="bg-orange-500 text-white px-4 py-2 rounded-full text-center hover:bg-orange-600 transition">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Toggle Script -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Hero Section -->
+<section class="bg-gradient-to-br from-primary-50 via-white to-primary-100 py-20 relative overflow-hidden">
+  <div class="container mx-auto px-6">
+    <div class="relative z-10 lg:grid lg:grid-cols-12 lg:gap-8">
+      <!-- Text Content -->
+      <div class="lg:col-span-7 xl:col-span-6">
+        <h2 class="text-6xl lg:text-7xl font-semibold text-gray-800 mb-6 leading-tight">
+          Access to USSD never been easier. 
+        </h2>
+        <p class="text-lg text-gray-700 mb-8">
+          Build your apps on Uzo now with just a few clicks<br>
+          No technical skills needed.
+        </p>
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-4">
+          <button 
+            onclick="openModal()" 
+            class="bg-primary-600 text-white px-8 py-3 rounded-full hover:bg-primary-500 transition">
+            Get Started
+          </button>
+          <a 
+            href="#" 
+            class="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition">
+            Create Your Account Free
+          </a>
+        </div>
+      </div>
+
+      <!-- Image Container -->
+      <div class="relative mt-10 lg:mt-0 lg:col-span-5 lg:row-span-2 xl:col-span-6">
+        <div class="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0">
+          <!-- Decorative background elements -->
+        </div>
+        <div class="relative -mx-4 h-[458px] w-[830px] px-9 [mask-image:linear-gradient(to_bottom,white_80%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-32 lg:-top-10 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-36">
+          <img 
+            src="images/ussd-guy.bafbd27e0eab93dff8a9.png" 
+            class="mx-auto max-w-[830px] w-full h-auto" 
+            alt="USSD Interface"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Unlock the Power of USSD Section -->
+<section class="bg-white py-20 px-6 md:px-16">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-6xl font-semibold mb-4">
+      <span class="text-yellow-500">Unlock the Power of</span> <span class="text-orange-500">USSD with Uzo!</span>
+    </h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-10">
+      Transform your ideas into reality with our no-code platform. With Uzo, effortlessly create your own USSD applications and secure your unique USSD short-codes—all without writing a single line of code.
+    </p>
+  </div>
+
+
+
+  <div class="mt-16 mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:max-w-7xl">
+    <ol class="-mx-3 grid grid-cols-1 gap-y-16 lg:grid-cols-3 lg:text-center xl:-mx-12 xl:divide-x xl:divide-slate-400/20">
+      <li class="grid auto-rows-min grid-cols-1 items-center gap-12 px-3 sm:grid-cols-2 sm:gap-y-6 lg:grid-cols-1 xl:px-12 [&amp;:nth-child(4)]:lg:!border-l-0">
+        <div class="relative h-48 overflow-hidden rounded-2xl shadow-lg sm:h-60 lg:h-40"><div class="absolute inset-0 flex items-center justify-center bg-white">
+          <img class="relative" src="images/video-player.svg" alt="">
+        </div>
+  </div>
+        <div><h3 class="text-lg font-bold tracking-tight text-slate-900">No Code</h3>
+          <p class="mt-2 text-md text-slate-600">Build your USSD app through an intuitive, userfriendly interface with no code.</p>
+        </div>
+      </li>
+          <li class="grid auto-rows-min grid-cols-1 items-center gap-12 px-3 sm:grid-cols-2 sm:gap-y-6 lg:grid-cols-1 xl:px-12 [&amp;:nth-child(4)]:lg:!border-l-0">
+            <div class="relative h-48 overflow-hidden rounded-2xl shadow-lg sm:h-60 lg:h-40">
+              <div class="absolute inset-0 flex items-center justify-center bg-gray-100 group relative flex flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-black/5 data-[dark]:bg-gray-800 data-[dark]:ring-white/15">
+              <div class="relative h-48 shrink-0 sm:h-60 lg:h-40">
+              <div class="flex size-full">
+              <div class="relative pt-0.5"><div class="absolute w-[180px] h-[170px] rounded-[18px] shadow-sm ring-1 ring-black/5 left-1/2 -translate-x-1/2 -top-5"></div>
+              <div class="absolute w-[170px] h-[166px] rounded-[14px] shadow-sm ring-1 ring-black/5 left-1/2 -translate-x-1/2 -top-5"></div>
+              <div aria-hidden="true" class="flex flex-col gap-3">
+              <div class="group flex h-9 gap-3">
+                      <div class="flex flex-col items-center justify-center gap-0.5 px-1 py-px rounded-full bg-white bg-gradient-to-t from-black/[3%] shadow-[0_1px_rgb(0_0_0_/_0.05)] ring-1 ring-black/10 [:where(&amp;_svg)]:fill-gray-900 [:where(&amp;_svg)]:h-5" style="width: 2.25rem; box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(47, 127, 221, 0.8) 0px 0px 0px 1px, rgba(47, 127, 221, 0) 0px 0px 3px 3px, rgba(47, 127, 221, 0) 0px 0px 0px 0px; transform: none;">7<div class="flex text-[6px] -mt-1">PQRS</div></div><div class="flex flex-col items-center justify-center gap-0.5 px-1 py-px rounded-full bg-white bg-gradient-to-t from-black/[3%] shadow-[0_1px_rgb(0_0_0_/_0.05)] ring-1 ring-black/10 [:where(&amp;_svg)]:fill-gray-900 [:where(&amp;_svg)]:h-5" style="width: 2.25rem; box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(47, 127, 221, 0.8) 0px 0px 0px 1px, rgba(47, 127, 221, 0.137) 0px 0px 2.49079px 3.76382px, rgba(47, 127, 221, 0.05) 0px 0px 0.25461px 3.81909px; transform: scale(1.00509);">8<div class="flex text-[6px] -mt-1">TUV</div></div><div class="flex flex-col items-center justify-center gap-0.5 px-1 py-px rounded-full bg-white bg-gradient-to-t from-black/[3%] shadow-[0_1px_rgb(0_0_0_/_0.05)] ring-1 ring-black/10 [:where(&amp;_svg)]:fill-gray-900 [:where(&amp;_svg)]:h-5" style="width: 2.25rem;">9<div class="flex text-[6px] -mt-1">WXYZ</div></div></div><div class="group flex h-9 gap-3"><div class="flex flex-col items-center justify-center gap-0.5 px-1 py-px rounded-full bg-white bg-gradient-to-t from-black/[3%] shadow-[0_1px_rgb(0_0_0_/_0.05)] ring-1 ring-black/10 [:where(&amp;_svg)]:fill-gray-900 [:where(&amp;_svg)]:h-5" style="width: 2.25rem; box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(47, 127, 221, 0.8) 0px 0px 0px 1px, rgba(47, 127, 221, 0.1) 0px 0px 1.05797px 5.91305px, rgba(47, 127, 221, 0.05) 0px 0px 0.97102px 14.5653px; transform: scale(1.01942);"><svg viewBox="0 0 6 14"><path d="M3.365 7.891h-.752l.113-1.75-1.455.977-.371-.65 1.574-.779L.9 4.916l.37-.65 1.461.983-.118-1.757h.752L3.247 5.25l1.461-.983.37.65-1.578.773 1.579.779-.371.65-1.46-.978.117 1.751Z"></path></svg><div class="flex text-[6px] -mt-1"></div></div><div class="flex flex-col items-center justify-center gap-0.5 px-1 py-px rounded-full bg-white bg-gradient-to-t from-black/[3%] shadow-[0_1px_rgb(0_0_0_/_0.05)] ring-1 ring-black/10 [:where(&amp;_svg)]:fill-gray-900 [:where(&amp;_svg)]:h-5" style="width: 2.25rem; box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(47, 127, 221, 0.8) 0px 0px 0px 1px, rgba(47, 127, 221, 0) 0px 0px 3px 3px, rgba(47, 127, 221, 0) 0px 0px 0px 0px; transform: none;"><div class="[:where(&amp;_svg)]:!h-3.5">0 <div class="-mt-1.5"><svg viewBox="0 0 8 14"><path d="M4.47 9.029v2.818h-.946V9.03H.94v-.952h2.584V5.404h.946v2.673h2.59v.952H4.47Z"></path></svg></div></div><div class="flex text-[6px] -mt-1"></div></div><div class="flex flex-col items-center justify-center gap-0.5 px-1 py-px rounded-full bg-white bg-gradient-to-t from-black/[3%] shadow-[0_1px_rgb(0_0_0_/_0.05)] ring-1 ring-black/10 [:where(&amp;_svg)]:fill-gray-900 [:where(&amp;_svg)]:h-5" style="width: 2.25rem; box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(47, 127, 221, 0.8) 0px 0px 0px 1px, rgba(47, 127, 221, 0) 0px 0px 3px 3px, rgba(47, 127, 221, 0) 0px 0px 0px 0px; transform: none;"><svg viewBox="0 0 7 14"><path d="M6.476 6.434h-1.22l-.36 1.74H6.1l-.145.747H4.746L4.327 11h-.773l.424-2.08H2.302L1.878 11h-.774l.42-2.08H.378l.15-.746h1.156l.354-1.74H.9l.145-.747H2.19l.409-2.019h.778l-.413 2.02h1.676l.413-2.02h.768l-.408 2.02h1.214l-.15.746Zm-3.674-.027-.37 1.789h1.707l.365-1.789H2.802Z"></path></svg><div class="flex text-[6px] -mt-1"></div></div></div><div class="group flex h-9 gap-3"><div class="flex w-full justify-center"><div class="!bg-green-400 !ring-green-500 [:where(&amp;_svg)]:!fill-white flex flex-col items-center justify-center gap-0.5 px-1 py-px rounded-full bg-white bg-gradient-to-t from-black/[3%] shadow-[0_1px_rgb(0_0_0_/_0.05)] ring-1 ring-black/10 [:where(&amp;_svg)]:fill-gray-900 [:where(&amp;_svg)]:h-5" style="width: 2.25rem;"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><div class="flex text-[6px] -mt-1"></div></div></div></div></div></div></div></div></div></div><div><h3 class="text-lg font-bold tracking-tight text-slate-900">Short Codes</h3><p class="mt-2 text-md text-slate-600">Acquire and manage your dedicated and shared short codes across all networks. No trips to regulatory bodies or mobile network operators.</p></div></li><li class="grid auto-rows-min grid-cols-1 items-center gap-12 px-3 sm:grid-cols-2 sm:gap-y-6 lg:grid-cols-1 xl:px-12 [&amp;:nth-child(4)]:lg:!border-l-0"><div class="relative h-48 overflow-hidden rounded-2xl shadow-lg sm:h-60 lg:h-40"><div class="group relative flex flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-black/5 data-[dark]:bg-gray-800 data-[dark]:ring-white/15"><div class="relative h-48 shrink-0 sm:h-60 lg:h-40"><div aria-hidden="true" class="relative h-full overflow-hidden"><div class="absolute inset-0"><div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,transparent_25%,color-mix(in_srgb,_theme(colors.blue.500)_var(--opacity),transparent)_100%)] ring-1 ring-inset ring-blue-500/[8%]" style="--opacity: 3%; width: 330px; height: 330px;"></div><div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,transparent_25%,color-mix(in_srgb,_theme(colors.blue.500)_var(--opacity),transparent)_100%)] ring-1 ring-inset ring-blue-500/[8%]" style="--opacity: 5%; width: 260px; height: 260px;"></div><div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,transparent_25%,color-mix(in_srgb,_theme(colors.blue.500)_var(--opacity),transparent)_100%)] ring-1 ring-inset ring-blue-500/[8%]" style="--opacity: 5%; width: 180px; height: 180px;"></div><div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,transparent_25%,color-mix(in_srgb,_theme(colors.blue.500)_var(--opacity),transparent)_100%)] ring-1 ring-inset ring-blue-500/[8%]" style="--opacity: 10%; width: 110px; height: 110px;"></div><div class="absolute inset-0 bg-gradient-to-t from-white to-35%"></div></div><div class="absolute left-1/2 h-full w-full -translate-x-1/2"><div class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 flex size-12 items-center justify-center rounded-full bg-white text-primary font-bold shadow ring-1 ring-black/5"> Uzo</div><div class="absolute size-10 rounded-full bg-white shadow ring-1 ring-black/5 flex justify-center items-center" style="left: 255px; top: 10px; transform: none;"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="text-[#6366F1]"><path fill="currentColor" d="m7.9 14.1l.09-.09c.27-.27.32-.71.08-1.01C7.36 12.09 7 11.01 7 10c0-1.08.35-2.16 1.04-3.01c.25-.3.21-.75-.07-1.02L7.9 5.9c-.34-.34-.9-.3-1.2.08c-.91 1.18-1.4 2.6-1.4 4.02s.49 2.84 1.4 4.02c.3.38.86.42 1.2.08M18.51 3.49l-.08.08c-.3.3-.29.76-.03 1.08c1.26 1.53 1.9 3.48 1.9 5.35s-.63 3.81-1.9 5.35c-.28.33-.23.83.08 1.14c.35.35.93.31 1.24-.07C21.29 14.54 22 12.31 22 10c0-2.32-.79-4.55-2.31-6.43c-.3-.37-.85-.41-1.18-.08"></path><path fill="currentColor" d="m5.57 3.57l-.08-.08c-.33-.33-.88-.29-1.18.08C2.79 5.45 2 7.68 2 10s.79 4.55 2.31 6.43c.3.37.85.42 1.18.08l.08-.08c.3-.3.29-.76.03-1.08c-1.27-1.54-1.9-3.48-1.9-5.35s.63-3.81 1.9-5.35c.26-.32.27-.78-.03-1.08m10.5 10.5c.36.36.95.32 1.26-.09c.9-1.18 1.37-2.58 1.37-3.98c-.08-1.41-.51-2.83-1.4-4.01a.797.797 0 0 0-1.2-.09l-.08.08c-.27.27-.32.71-.08 1.01c.7.92 1.06 2 1.06 3.01c0 1.07-.34 2.13-1.01 2.98c-.26.32-.22.79.08 1.09M14.5 10c0-1.6-1.51-2.85-3.18-2.41c-.8.21-1.46.85-1.7 1.65c-.32 1.06.06 2.04.76 2.64l-2.96 8.87c-.21.62.25 1.25.9 1.25c.41 0 .77-.26.9-.65L9.67 20h4.67l.45 1.35a.949.949 0 1 0 1.8-.6l-2.96-8.87c.53-.46.87-1.12.87-1.88m-4.17 8L12 13l1.67 5z"></path></svg></div><div class="absolute size-10 rounded-full bg-white shadow ring-1 ring-black/5 flex justify-center items-center" style="left: 255px; top: 80px; transform: none;"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="text-[#6366F1]"><path fill="currentColor" d="m7.9 14.1l.09-.09c.27-.27.32-.71.08-1.01C7.36 12.09 7 11.01 7 10c0-1.08.35-2.16 1.04-3.01c.25-.3.21-.75-.07-1.02L7.9 5.9c-.34-.34-.9-.3-1.2.08c-.91 1.18-1.4 2.6-1.4 4.02s.49 2.84 1.4 4.02c.3.38.86.42 1.2.08M18.51 3.49l-.08.08c-.3.3-.29.76-.03 1.08c1.26 1.53 1.9 3.48 1.9 5.35s-.63 3.81-1.9 5.35c-.28.33-.23.83.08 1.14c.35.35.93.31 1.24-.07C21.29 14.54 22 12.31 22 10c0-2.32-.79-4.55-2.31-6.43c-.3-.37-.85-.41-1.18-.08"></path><path fill="currentColor" d="m5.57 3.57l-.08-.08c-.33-.33-.88-.29-1.18.08C2.79 5.45 2 7.68 2 10s.79 4.55 2.31 6.43c.3.37.85.42 1.18.08l.08-.08c.3-.3.29-.76.03-1.08c-1.27-1.54-1.9-3.48-1.9-5.35s.63-3.81 1.9-5.35c.26-.32.27-.78-.03-1.08m10.5 10.5c.36.36.95.32 1.26-.09c.9-1.18 1.37-2.58 1.37-3.98c-.08-1.41-.51-2.83-1.4-4.01a.797.797 0 0 0-1.2-.09l-.08.08c-.27.27-.32.71-.08 1.01c.7.92 1.06 2 1.06 3.01c0 1.07-.34 2.13-1.01 2.98c-.26.32-.22.79.08 1.09M14.5 10c0-1.6-1.51-2.85-3.18-2.41c-.8.21-1.46.85-1.7 1.65c-.32 1.06.06 2.04.76 2.64l-2.96 8.87c-.21.62.25 1.25.9 1.25c.41 0 .77-.26.9-.65L9.67 20h4.67l.45 1.35a.949.949 0 1 0 1.8-.6l-2.96-8.87c.53-.46.87-1.12.87-1.88m-4.17 8L12 13l1.67 5z"></path></svg></div><div class="absolute size-10 rounded-full bg-white shadow ring-1 ring-black/5 flex justify-center items-center" style="left: 144px; top: -6px; transform: none;"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="text-[#6366F1]"><path fill="currentColor" d="m7.9 14.1l.09-.09c.27-.27.32-.71.08-1.01C7.36 12.09 7 11.01 7 10c0-1.08.35-2.16 1.04-3.01c.25-.3.21-.75-.07-1.02L7.9 5.9c-.34-.34-.9-.3-1.2.08c-.91 1.18-1.4 2.6-1.4 4.02s.49 2.84 1.4 4.02c.3.38.86.42 1.2.08M18.51 3.49l-.08.08c-.3.3-.29.76-.03 1.08c1.26 1.53 1.9 3.48 1.9 5.35s-.63 3.81-1.9 5.35c-.28.33-.23.83.08 1.14c.35.35.93.31 1.24-.07C21.29 14.54 22 12.31 22 10c0-2.32-.79-4.55-2.31-6.43c-.3-.37-.85-.41-1.18-.08"></path><path fill="currentColor" d="m5.57 3.57l-.08-.08c-.33-.33-.88-.29-1.18.08C2.79 5.45 2 7.68 2 10s.79 4.55 2.31 6.43c.3.37.85.42 1.18.08l.08-.08c.3-.3.29-.76.03-1.08c-1.27-1.54-1.9-3.48-1.9-5.35s.63-3.81 1.9-5.35c.26-.32.27-.78-.03-1.08m10.5 10.5c.36.36.95.32 1.26-.09c.9-1.18 1.37-2.58 1.37-3.98c-.08-1.41-.51-2.83-1.4-4.01a.797.797 0 0 0-1.2-.09l-.08.08c-.27.27-.32.71-.08 1.01c.7.92 1.06 2 1.06 3.01c0 1.07-.34 2.13-1.01 2.98c-.26.32-.22.79.08 1.09M14.5 10c0-1.6-1.51-2.85-3.18-2.41c-.8.21-1.46.85-1.7 1.65c-.32 1.06.06 2.04.76 2.64l-2.96 8.87c-.21.62.25 1.25.9 1.25c.41 0 .77-.26.9-.65L9.67 20h4.67l.45 1.35a.949.949 0 1 0 1.8-.6l-2.96-8.87c.53-.46.87-1.12.87-1.88m-4.17 8L12 13l1.67 5z"></path></svg></div><div class="absolute size-10 rounded-full bg-white shadow ring-1 ring-black/5 flex justify-center items-center" style="left: 36px; top: 56px; transform: none;"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="text-[#6366F1]"><path fill="currentColor" d="m7.9 14.1l.09-.09c.27-.27.32-.71.08-1.01C7.36 12.09 7 11.01 7 10c0-1.08.35-2.16 1.04-3.01c.25-.3.21-.75-.07-1.02L7.9 5.9c-.34-.34-.9-.3-1.2.08c-.91 1.18-1.4 2.6-1.4 4.02s.49 2.84 1.4 4.02c.3.38.86.42 1.2.08M18.51 3.49l-.08.08c-.3.3-.29.76-.03 1.08c1.26 1.53 1.9 3.48 1.9 5.35s-.63 3.81-1.9 5.35c-.28.33-.23.83.08 1.14c.35.35.93.31 1.24-.07C21.29 14.54 22 12.31 22 10c0-2.32-.79-4.55-2.31-6.43c-.3-.37-.85-.41-1.18-.08"></path><path fill="currentColor" d="m5.57 3.57l-.08-.08c-.33-.33-.88-.29-1.18.08C2.79 5.45 2 7.68 2 10s.79 4.55 2.31 6.43c.3.37.85.42 1.18.08l.08-.08c.3-.3.29-.76.03-1.08c-1.27-1.54-1.9-3.48-1.9-5.35s.63-3.81 1.9-5.35c.26-.32.27-.78-.03-1.08m10.5 10.5c.36.36.95.32 1.26-.09c.9-1.18 1.37-2.58 1.37-3.98c-.08-1.41-.51-2.83-1.4-4.01a.797.797 0 0 0-1.2-.09l-.08.08c-.27.27-.32.71-.08 1.01c.7.92 1.06 2 1.06 3.01c0 1.07-.34 2.13-1.01 2.98c-.26.32-.22.79.08 1.09M14.5 10c0-1.6-1.51-2.85-3.18-2.41c-.8.21-1.46.85-1.7 1.65c-.32 1.06.06 2.04.76 2.64l-2.96 8.87c-.21.62.25 1.25.9 1.25c.41 0 .77-.26.9-.65L9.67 20h4.67l.45 1.35a.949.949 0 1 0 1.8-.6l-2.96-8.87c.53-.46.87-1.12.87-1.88m-4.17 8L12 13l1.67 5z"></path></svg></div><div class="absolute size-10 rounded-full bg-white shadow ring-1 ring-black/5 flex justify-center items-center" style="left: 116px; top: 133px; transform: none;"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="text-[#6366F1]"><path fill="currentColor" d="m7.9 14.1l.09-.09c.27-.27.32-.71.08-1.01C7.36 12.09 7 11.01 7 10c0-1.08.35-2.16 1.04-3.01c.25-.3.21-.75-.07-1.02L7.9 5.9c-.34-.34-.9-.3-1.2.08c-.91 1.18-1.4 2.6-1.4 4.02s.49 2.84 1.4 4.02c.3.38.86.42 1.2.08M18.51 3.49l-.08.08c-.3.3-.29.76-.03 1.08c1.26 1.53 1.9 3.48 1.9 5.35s-.63 3.81-1.9 5.35c-.28.33-.23.83.08 1.14c.35.35.93.31 1.24-.07C21.29 14.54 22 12.31 22 10c0-2.32-.79-4.55-2.31-6.43c-.3-.37-.85-.41-1.18-.08"></path><path fill="currentColor" d="m5.57 3.57l-.08-.08c-.33-.33-.88-.29-1.18.08C2.79 5.45 2 7.68 2 10s.79 4.55 2.31 6.43c.3.37.85.42 1.18.08l.08-.08c.3-.3.29-.76.03-1.08c-1.27-1.54-1.9-3.48-1.9-5.35s.63-3.81 1.9-5.35c.26-.32.27-.78-.03-1.08m10.5 10.5c.36.36.95.32 1.26-.09c.9-1.18 1.37-2.58 1.37-3.98c-.08-1.41-.51-2.83-1.4-4.01a.797.797 0 0 0-1.2-.09l-.08.08c-.27.27-.32.71-.08 1.01c.7.92 1.06 2 1.06 3.01c0 1.07-.34 2.13-1.01 2.98c-.26.32-.22.79.08 1.09M14.5 10c0-1.6-1.51-2.85-3.18-2.41c-.8.21-1.46.85-1.7 1.65c-.32 1.06.06 2.04.76 2.64l-2.96 8.87c-.21.62.25 1.25.9 1.25c.41 0 .77-.26.9-.65L9.67 20h4.67l.45 1.35a.949.949 0 1 0 1.8-.6l-2.96-8.87c.53-.46.87-1.12.87-1.88m-4.17 8L12 13l1.67 5z"></path></svg></div></div></div></div></div></div><div><h3 class="text-lg font-bold tracking-tight text-slate-900">Connectors</h3><p class="mt-2 text-md text-slate-600">Don't have your USSD code with us? No problem. Connect to your app from any USSD code provider.</p></div></li><li class="grid auto-rows-min grid-cols-1 items-center gap-12 px-3 sm:grid-cols-2 sm:gap-y-6 lg:grid-cols-1 xl:px-12 [&amp;:nth-child(4)]:lg:!border-l-0"><div class="relative h-48 overflow-hidden rounded-2xl shadow-lg sm:h-60 lg:h-40"><div class="absolute inset-0 flex items-center justify-center bg-white"><svg class="text-[#6366F1] w-20 h-20" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" fill-rule="evenodd" d="M0 1.45C0 .625.696 0 1.5 0h11c.804 0 1.5.625 1.5 1.45v5.6c0 .825-.696 1.45-1.5 1.45h-11C.696 8.5 0 7.875 0 7.05zm9 2.8a2 2 0 1 1-4 0a2 2 0 0 1 4 0m-5.5.25a.75.75 0 1 0-1.5 0a.75.75 0 0 0 1.5 0m7.75-.75a.75.75 0 1 1 0 1.5a.75.75 0 0 1 0-1.5M5.125 10.5a.625.625 0 1 0-1.25 0v2a.625.625 0 1 0 1.25 0zM9.5 9.875c.345 0 .625.28.625.625v2a.625.625 0 1 1-1.25 0v-2c0-.345.28-.625.625-.625m-2.5.75c.345 0 .625.28.625.625v2a.625.625 0 1 1-1.25 0v-2c0-.345.28-.625.625-.625" clip-rule="evenodd"></path></svg></div></div><div><h3 class="text-lg font-bold tracking-tight text-slate-900">Payments</h3><p class="mt-2 text-md text-slate-600">Receive payments directly from your customers.</p></div></li><li class="grid auto-rows-min grid-cols-1 items-center gap-12 px-3 sm:grid-cols-2 sm:gap-y-6 lg:grid-cols-1 xl:px-12 [&amp;:nth-child(4)]:lg:!border-l-0"><div class="relative h-48 overflow-hidden rounded-2xl shadow-lg sm:h-60 lg:h-40"><div class="z-10 !overflow-visible bg-white  group relative flex flex-col overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-black/5 data-[dark]:bg-gray-800 data-[dark]:ring-white/15"><div class="relative h-48 shrink-0 sm:h-60 lg:h-40"><div aria-hidden="true" class="relative h-full overflow-hidden"><div class="absolute h-48 sm:h-60 lg:h-40 inset-0 grid grid-cols-1 pt-2 [container-type:inline-size]"><div class="group relative"><div class="absolute inset-x-0 top-1/2 h-0.5 bg-gradient-to-r from-[#1f2937]/15 from-[2px] to-[2px] bg-[length:12px_100%]"></div><div class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-white/5 from-[2px] to-[2px] bg-[length:12px_100%] group-last:hidden"></div><div class="[animation-delay:0s] [animation-duration:0s] translate-x-[5px] absolute top-2  items-center gap-2 whitespace-nowrap px-3 py-1 rounded-full bg-gradient-to-t from-gray-50 from-50% to-white ring-1 ring-inset ring-gray-900/10 [--move-x-from:-100%] [--move-x-to:calc(100%+100cqw)]  [animation-iteration-count:infinite] [animation-name:move-x] [animation-timing-function:linear] [animation-play-state:running]"><span class="text-sm/6 font-medium text-[#6366F1]">Apple Store</span></div><div class="[animation-delay:0s] [animation-duration:0s] translate-x-[135px] absolute top-2  items-center gap-2 whitespace-nowrap px-3 py-1 rounded-full bg-gradient-to-t from-gray-50 from-50% to-white ring-1 ring-inset ring-gray-900/10 [--move-x-from:-100%] [--move-x-to:calc(100%+100cqw)]  [animation-iteration-count:infinite] [animation-name:move-x] [animation-timing-function:linear] [animation-play-state:running]"><span class="text-sm/6 font-medium text-[#6366F1]">Slack</span></div><div class="[animation-delay:-40s] [animation-duration:0s] translate-x-[220px] absolute top-2  items-center gap-2 whitespace-nowrap px-3 py-1 rounded-full bg-gradient-to-t from-gray-50 from-50% to-white ring-1 ring-inset ring-gray-900/10 [--move-x-from:-100%] [--move-x-to:calc(100%+100cqw)]  [animation-iteration-count:infinite] [animation-name:move-x] [animation-timing-function:linear] [animation-play-state:running]"><span class="text-sm/6 font-medium text-[#6366F1]">Hubtel</span></div></div><div class="group relative"><div class="absolute inset-x-0 top-1/2 h-0.5 bg-gradient-to-r from-[#1f2937]/15 from-[2px] to-[2px] bg-[length:12px_100%]"></div><div class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-white/5 from-[2px] to-[2px] bg-[length:12px_100%] group-last:hidden"></div><div class="[animation-delay:0s] [animation-duration:0s] translate-x-[60px] absolute top-2  items-center gap-2 whitespace-nowrap px-3 py-1 rounded-full bg-gradient-to-t from-gray-50 from-50% to-white ring-1 ring-inset ring-gray-900/10 [--move-x-from:-100%] [--move-x-to:calc(100%+100cqw)]  [animation-iteration-count:infinite] [animation-name:move-x] [animation-timing-function:linear] [animation-play-state:running]"><span class="text-sm/6 font-medium text-[#6366F1]">Route SMS</span></div><div class="[animation-delay:-10s] [animation-duration:0s] translate-x-[180px] absolute top-2  items-center gap-2 whitespace-nowrap px-3 py-1 rounded-full bg-gradient-to-t from-gray-50 from-50% to-white ring-1 ring-inset ring-gray-900/10 [--move-x-from:-100%] [--move-x-to:calc(100%+100cqw)]  [animation-iteration-count:infinite] [animation-name:move-x] [animation-timing-function:linear] [animation-play-state:running]"><span class="text-sm/6 font-medium text-[#6366F1]">Paystack</span></div></div><div class="group relative"><div class="absolute inset-x-0 top-1/2 h-0.5 bg-gradient-to-r from-[#1f2937]/15 from-[2px] to-[2px] bg-[length:12px_100%]"></div><div class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-white/5 from-[2px] to-[2px] bg-[length:12px_100%] group-last:hidden"></div><div class="[animation-delay:0s] [animation-duration:0s] translate-x-[30px] absolute top-2  items-center gap-2 whitespace-nowrap px-3 py-1 rounded-full bg-gradient-to-t from-gray-50 from-50% to-white ring-1 ring-inset ring-gray-900/10 [--move-x-from:-100%] [--move-x-to:calc(100%+100cqw)]  [animation-iteration-count:infinite] [animation-name:move-x] [animation-timing-function:linear] [animation-play-state:running]"><span class="text-sm/6 font-medium text-[#6366F1]">USSD Cloud</span></div><div class="[animation-delay:-13s] [animation-duration:0s] translate-x-[160px] absolute top-2  items-center gap-2 whitespace-nowrap px-3 py-1 rounded-full bg-gradient-to-t from-gray-50 from-50% to-white ring-1 ring-inset ring-gray-900/10 [--move-x-from:-100%] [--move-x-to:calc(100%+100cqw)]  [animation-iteration-count:infinite] [animation-name:move-x] [animation-timing-function:linear] [animation-play-state:running]"><span class="text-sm/6 font-medium text-[#6366F1]">Google Drive</span></div></div></div></div></div></div></div><div><h3 class="text-lg font-bold tracking-tight text-slate-900">Integration</h3><p class="mt-2 text-md text-slate-600">Link your application with your existing software tools and services via APIs.</p></div></li><li class="grid auto-rows-min grid-cols-1 items-center gap-12 px-3 sm:grid-cols-2 sm:gap-y-6 lg:grid-cols-1 xl:px-12 [&amp;:nth-child(4)]:lg:!border-l-0"><div class="relative h-48 overflow-hidden rounded-2xl shadow-lg sm:h-60 lg:h-40"><div class="absolute inset-0 flex items-center justify-center bg-white"><img src="/static/media/sms.890a14ca0668359eaa0ba9c5e29c6c1c.svg" alt=""></div></div><div><h3 class="text-lg font-bold tracking-tight text-slate-900">Send SMS</h3><p class="mt-2 text-md text-slate-600">Send SMS to your customers through your USSD app.</p></div></li></ol></div>
+
+                      
+  <!-- Call to Action -->
+  <div class="text-center mt-16">
+    <a href="#" class="bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-orange-700 transition">
+      Let’s Build
+    </a>
+  </div>
+</section>
+
+
+  <!-- CTA -->
+  <section class="bg-gray-900 text-white py-20 text-center">
+    <h2 class="text-4xl font-bold mb-6">Get unique short-codes today!</h2>
+    <p class="text-lg mb-5 text-gray-600 text-center">Make it easy for your audience to connect with you and simplify your communication across all networks.</p>
+    <a href="#" class="bg-orange-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-00 transition">
+     Get Shortcode
+    </a>
+  </section>
+
+<section id="faqs" aria-labelledby="faqs-title" class="py-16 sm:py-24 bg-gray-50 border-t border-gray-200">
+  <div class="container mx-auto px-4">
+    <!-- Section Title -->
+    <div class="max-w-5xl mx-auto lg:mx-0 text-center lg:text-left mb-12">
+      <h2 id="faqs-title" class="text-3xl font-semibold text-gray-900 mb-2">Frequently asked questions</h2>
+      <p class="text-base text-gray-600">
+        Have more questions? <a href="/faq" class="text-gray-900 underline font-medium">See full FAQ</a>.
+      </p>
+    </div>
+
+    <!-- FAQ Grid -->
+    <ul class="mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Column 1 -->
+      <li class="space-y-6">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">What is USSD?</h3>
+          <p class="mt-2 text-gray-700 text-sm">Unstructured Supplementary Service Data (USSD) is a way of communicating with your mobile network or a web-based service using short-codes that start with * and end with #. It can be used to provide various online services without using the internet or installing any apps on your phone.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">What are USSD sessions?</h3>
+          <p class="mt-2 text-gray-700 text-sm">Whenever a USSD code is dialed, a session is created that lasts for the duration of the interaction.</p>
+        </div>
+      </li>
+
+      <!-- Column 2 -->
+      <li class="space-y-6">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">What is a USSD short code?</h3>
+          <p class="mt-2 text-gray-700 text-sm">A short code is a special phone number that is shorter than a regular phone number and is used to facilitate communication between mobile devices and the telecom operator.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">Is Uzo cloud based?</h3>
+          <p class="mt-2 text-gray-700 text-sm">Yes, Uzo is cloud based. Enterprises can request a self-hosted version of Uzo for private servers if needed.</p>
+        </div>
+      </li>
+
+      <!-- Column 3 -->
+      <li class="space-y-6">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">What are workload units?</h3>
+          <p class="mt-2 text-gray-700 text-sm">Workload units represent the basic unit of processing for an Uzo App, required for each execution of your application.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900">What is a dedicated USSD code?</h3>
+          <p class="mt-2 text-gray-700 text-sm">A dedicated USSD code is a short number assigned and used by only one enterprise or service, such as *123#.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+ <!-- More than Clients Section -->
+<section class="py-24 relative rounded-xl bg-white">
+  <div class="text-center font-bold text-4xl md:text-[40px] mb-12">
+    More than clients, they’re believers.
+  </div>
+
+  <div class="relative overflow-x-auto">
+    <div class="container mx-auto flex justify-center">
+      <div class="grid grid-flow-col auto-cols-max gap-6 items-center">
+        <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/FIDO-logo.webp" alt="Fido"></div>
+        <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/Fastcare_logo.png" alt="Fastcare"></div>
+        <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/login-img2.png" alt="Nationwide"></div>
+        <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/antcellular2.jpg" alt="Ant Cellular"></div>
+        <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/images.jpeg" alt="Mega Cash"></div>
+        <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/ElGiga.jpg" alt="El Giga Farms"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-16 bg-gray-800">
+  <div class="flex flex-col md:flex-row items-center md:items-start ml-4 md:ml-12">
+    <!-- Logo -->
+    <a href="/" class="text-lg text-orange-500 font-bold mb-4 md:mb-0">UZO</a>
+
+    <!-- Links -->
+    <div class="flex space-x-8 pl-0 md:pl-8">
+      <a href="/terms" class="text-xs leading-6 text-white font-normal">Terms and Conditions</a>
+      <a href="/privacy" class="text-xs leading-6 text-white font-normal">Privacy Policy</a>
+      <a href="/contact" class="text-xs leading-6 text-white font-normal">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="border-t-2 border-gray-600 mt-6 pt-6 md:ml-24 px-4 md:px-6 text-gray-400 text-xs text-center md:text-left">
+    © 2025 Uzo. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
