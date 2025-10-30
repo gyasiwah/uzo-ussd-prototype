@@ -125,8 +125,8 @@
 
   <!--  PRICING SECTION  -->
   <section id="pricing" class="border-t border-gray-200 bg-gray-100 py-20 sm:py-32">
-    <div class="mx-auto max-w-2xl text-center px-4">
-      <h2 class="text-4xl font-medium tracking-tight bg-gradient-to-b from-yellow-400 to-orange-500 bg-clip-text text-transparent pb-3">
+    <div class="mx-auto max-w-2xl text-center px-4" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;" >
+      <h2 class="text-5xl font-medium tracking-tight bg-gradient-to-b from-yellow-400 to-orange-500 bg-clip-text text-transparent pb-3">
         Simple pricing, for everyone.
       </h2>
       <p class="mt-2 text-md text-gray-600">
@@ -136,16 +136,39 @@
 
     
       <!-- Toggle Buttons -->
-      <div class="flex justify-center mt-10">
-        <div class="relative inline-grid grid-cols-3 rounded-xl overflow-hidden border border-gray-300 bg-white w-[800px] shadow-md">
-          <div id="highlight" class="absolute inset-0 bg-orange-400 transition-transform duration-300" style="transform: translateX(0); width: 33.33%; z-index: 5;"></div>
-          <button id="app-builder" class="tab-btn active relative py-2 px-6 text-lg font-small text-white z-10" data-index="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">App Builder</button>
-          <button id="ussd-shared" class="tab-btn relative py-2 px-6 text-lg font-small text-gray-700 z-10" data-index="1" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">USSD Shared Code</button>
-          <button id="dedicated" class="tab-btn relative py-2 px-6 text-lg font-small text-gray-700 z-10" data-index="2" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Dedicated Code</button>
-          <div class="absolute inset-y-0 w-px bg-gray-300 z-0" style="left: 33.33%;"></div>
-          <div class="absolute inset-y-0 w-px bg-gray-300 z-0" style="left: 66.66%;"></div>
-        </div>
-      </div>
+  <div class="flex justify-center mt-10">
+  <div class="relative inline-grid grid-cols-3 rounded-[14px] overflow-hidden border border-gray-300 bg-white w-[560px] mx-auto shadow-md">
+    
+    <!-- Orange highlight -->
+    <div id="highlight"
+      class="absolute inset-0 bg-[#FF7A00] transition-transform duration-300 ease-in-out"
+      style="transform: translateX(0); width: 33.33%; z-index: 5;">
+    </div>
+
+    <!-- Buttons -->
+    <button id="app-builder"
+      class="tab-btn active relative py-[15px] px-[11px] text-[18px] text-white z-10 font-normal"
+      style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
+      App Builder
+    </button>
+
+    <button id="ussd-shared"
+      class="tab-btn relative py-[15px] px-[11px] text-[18px] text-gray-700 z-10 font-normal"
+      style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
+      USSD Shared Code
+    </button>
+
+    <button id="dedicated"
+      class="tab-btn relative py-[15px] px-[11px] text-[18px] text-gray-700 z-10 font-normal"
+      style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
+      Dedicated Code
+    </button>
+
+    <!-- Dividers -->
+    <div class="absolute inset-y-0 w-px bg-gray-300 z-0" style="left: 33.33%;"></div>
+    <div class="absolute inset-y-0 w-px bg-gray-300 z-0" style="left: 66.66%;"></div>
+  </div>
+</div>
 
 
 
