@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  class="bg-gray-50 antialiased">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,502 +61,506 @@
   </style>
 </head>
 <body class="bg-white">
-  <nav id="main-nav" class="flex items-center justify-between p-6 lg:px-8 transition-all duration-300" aria-label="Global">
-    <div class="flex lg:flex-1">
-      <a class="-m-1.5 p-1.5" href="/">
-        <span class="text-2xl font-bold logo-text">Uzo</span> <!-- Changed to black -->
-      </a>
-    </div>
-    <div class="flex lg:hidden">
-      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-        <span class="sr-only">Open main menu</span>
-        <img class="h-6 w-6" aria-hidden="true" alt="menu" src="images/menu.svg">
-      </button>
-    </div>
-    <div class="hidden lg:flex lg:gap-x-8 lg:justify-end items-center pr-6 border-r border-lightgrey">
-      <a class="nav-link text-sm leading-6 text-gray-700 font-bold transition duration-300" href="index.html" id="home-link">Home</a>
-      <a class="nav-link text-sm leading-6 text-gray-600 font-bold transition duration-300" href="" id="pricing-link">Pricing</a>
-      <a class="nav-link text-sm leading-6 text-gray-600 font-bold transition duration-300" href="faq.html" id="faq-link">FAQ</a>
-      <a class="nav-link text-sm leading-6 text-gray-600 font-bold transition duration-300" href="contact.html" id="contact-link">Contact Us</a>
-    </div>
-    <div class="hidden lg:flex lg:gap-x-8 lg:justify-end items-center ml-6">
-      <a class="text-md text-orange-400 font-bold" href="https://app.uzoussd.com/app/login">Log in</a>
-      <a class="rounded-full bg-orange-400 text-white px-6 py-2 border drop-shadow font-bold" href="https://app.uzoussd.com/app/register">Get Started</a> <!-- Text remains white -->
-    </div>
-  </nav>
-
-  <!-- JavaScript for scroll detection and active link -->
-  <script>
-    // Scroll detection
-    window.addEventListener('scroll', () => {
-      const nav = document.getElementById('main-nav');
-      if (window.scrollY > 50) {
-        nav.classList.add('navbar-sticky');
-      } else {
-        nav.classList.remove('navbar-sticky');
-      }
-    });
-
-    // Set active link based on current page
-    document.addEventListener('DOMContentLoaded', () => {
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      console.log('Current page detected:', currentPage);
-      const links = {
-        'index.html': document.getElementById('home-link'),
-        'pricing.html': document.getElementById('pricing-link'),
-        'faq.html': document.getElementById('faq-link'),
-        'contact.html': document.getElementById('contact-link')
-      };
-
-      for (const [page, link] of Object.entries(links)) {
-        if (page === currentPage) {
-          if (link) {
-            link.classList.add('active');
-            console.log('Active link set to:', link.textContent);
-          } else {
-            console.error('Link not found for page:', page);
-          }
-          break;
-        }
-      }
-    });
-  </script>
- 
-
-  <!--  PRICING SECTION  -->
-  <section id="pricing" class="border-t border-gray-200 bg-gray-100 py-20 sm:py-32">
-    <div class="mx-auto max-w-2xl text-center px-4" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;" >
-      <h2 class="text-5xl font-medium tracking-tight bg-gradient-to-b from-yellow-400 to-orange-500 bg-clip-text text-transparent pb-3">
-        Simple pricing, for everyone.
-      </h2>
-      <p class="mt-2 text-md text-gray-600">
-        Choose a package that meets your needs. Whether you're just getting started or looking for complex integration, <b>Uzo</b> has what you need.
-      </p>
-    </div>
-
-    
-      <!-- Toggle Buttons -->
-  <div class="flex justify-center mt-10">
-  <div class="relative inline-grid grid-cols-3 rounded-[14px] overflow-hidden border border-gray-300 bg-white w-[560px] mx-auto shadow-md">
-    
-    <!-- Orange highlight -->
-    <div id="highlight"
-      class="absolute inset-0 bg-[#FF7A00] transition-transform duration-300 ease-in-out"
-      style="transform: translateX(0); width: 33.33%; z-index: 5;">
-    </div>
-
-    <!-- Buttons -->
-    <button id="app-builder"
-      class="tab-btn active relative py-[15px] px-[11px] text-[18px] text-white z-10 font-normal"
-      style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
-      App Builder
-    </button>
-
-    <button id="ussd-shared"
-      class="tab-btn relative py-[15px] px-[11px] text-[18px] text-gray-700 z-10 font-normal"
-      style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
-      USSD Shared Code
-    </button>
-
-    <button id="dedicated"
-      class="tab-btn relative py-[15px] px-[11px] text-[18px] text-gray-700 z-10 font-normal"
-      style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
-      Dedicated Code
-    </button>
-
-    <!-- Dividers -->
-    <div class="absolute inset-y-0 w-px bg-gray-300 z-0" style="left: 33.33%;"></div>
-    <div class="absolute inset-y-0 w-px bg-gray-300 z-0" style="left: 66.66%;"></div>
-  </div>
-</div>
-
-
-
-    <!-- Pricing Content -->
-    <div class="mt-16 max-w-7xl mx-auto px-4">
-      <!-- APP BUILDER -->
-      <div id="pricing-app-builder" class="pricing-section">
-        <div class="grid gap-8 lg:grid-cols-3 lg:gap-10 max-w-2xl mx-auto lg:max-w-none">
-          <!-- Starter -->
-          <section class="flex flex-col rounded-3xl p-6 shadow-lg bg-white">
-            <h3 class="flex items-center text-sm font-semibold text-gray-900">
-              <svg class="h-6 w-6 fill-gray-300" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20ZM4 20c0 7.264 5.163 13.321 12.02 14.704C17.642 35.03 19 33.657 19 32V8c0-1.657-1.357-3.031-2.98-2.704C9.162 6.68 4 12.736 4 20Z"/></svg>
-              <span class="ml-4">Starter</span>
-            </h3>
-            <p class="mt-5 text-4xl tracking-tight text-gray-900"><span>¢60</span><span class="ml-2 mt-2.5 text-sm text-gray-600">per month</span></p>
-            <ul class="-my-2 divide-y text-sm divide-gray-200 text-gray-700 mt-6">
-              <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">1GB storage</span><span class="tooltip-text"></span></li>
-              <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">5,000 workload units</span><span class="tooltip-text"></span></li>
-            </ul>
-          </section>
-          <!-- Starter Plus (Featured) -->
-          <section class="flex flex-col rounded-3xl p-6 shadow-lg order-first lg:order-none bg-gray-900 text-white">
-            <h3 class="flex items-center text-sm font-semibold">
-              <svg class="h-6 w-6 fill-orange-400" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20ZM4 20c0 7.264 5.163 13.321 12.02 14.704C17.642 35.03 19 33.657 19 32V8c0-1.657-1.357-3.031-2.98-2.704C9.162 6.68 4 12.736 4 20Z"/></svg>
-              <span class="ml-4">Starter Plus</span>
-            </h3>
-            <p class="mt-5 text-4xl tracking-tight"><span>¢100</span><span class="ml-2 mt-2.5 text-sm text-gray-300">per month</span></p>
-            <ul class="-my-2 divide-y text-sm divide-gray-800 text-gray-300 mt-6">
-              <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">2GB storage</span><span class="tooltip-text"></span></li>
-              <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">10,000 workload units</span><span class="tooltip-text"></span></li>
-            </ul>
-          </section>
-          <!-- Standard -->
-          <section class="flex flex-col rounded-3xl p-6 shadow-lg bg-white">
-            <h3 class="flex items-center text-sm font-semibold text-gray-900">
-              <svg class="h-6 w-6 fill-gray-300" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20ZM4 20c0 7.264 5.163 13.321 12.02 14.704C17.642 35.03 19 33.657 19 32V8c0-1.657-1.357-3.031-2.98-2.704C9.162 6.68 4 12.736 4 20Z"/></svg>
-              <span class="ml-4">Standard</span>
-            </h3>
-            <p class="mt-5 text-4xl tracking-tight text-gray-900"><span>¢200</span><span class="ml-2 mt-2.5 text-sm text-gray-600">per month</span></p>
-            <ul class="-my-2 divide-y text-sm divide-gray-200 text-gray-700 mt-6">
-              <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">3GB storage</span><span class="tooltip-text"></span></li>
-              <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">20,000 workload units</span><span class="tooltip-text"></span></li>
-            </ul>
-          </section>
-          <!-- Standard Plus -->
-          <section class="flex flex-col rounded-3xl p-6 shadow-lg bg-white">
-            <h3 class="flex items-center text-sm font-semibold text-gray-900">
-              <svg class="h-6 w-6 fill-gray-300" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20ZM4 20c0 7.264 5.163 13.321 12.02 14.704C17.642 35.03 19 33.657 19 32V8c0-1.657-1.357-3.031-2.98-2.704C9.162 6.68 4 12.736 4 20Z"/></svg>
-              <span class="ml-4">Standard Plus</span>
-            </h3>
-            <p class="mt-5 text-4xl tracking-tight text-gray-900"><span>¢280</span><span class="ml-2 mt-2.5 text-sm text-gray-600">per month</span></p>
-            <ul class="-my-2 divide-y text-sm divide-gray-200 text-gray-700 mt-6">
-              <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">5GB storage</span><span class="tooltip-text"></span></li>
-              <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">30,000 workload units</span><span class="tooltip-text"></span></li>
-            </ul>
-          </section>
-          <!-- Professional -->
-          <section class="flex flex-col rounded-3xl p-6 shadow-lg bg-white">
-            <h3 class="flex items-center text-sm font-semibold text-gray-900">
-              <svg class="h-6 w-6 fill-gray-500" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20ZM4 20c0 7.264 5.163 13.321 12.02 14.704C17.642 35.03 19 33.657 19 32V8c0-1.657-1.357-3.031-2.98-2.704C9.162 6.68 4 12.736 4 20Z"/></svg>
-              <span class="ml-4">Professional</span>
-            </h3>
-            <p class="mt-5 text-4xl tracking-tight text-gray-900"><span>¢350</span><span class="ml-2 mt-2.5 text-sm text-gray-600">per month</span></p>
-            <ul class="-my-2 divide-y text-sm divide-gray-200 text-gray-700 mt-6">
-              <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">10GB storage</span><span class="tooltip-text"></span></li>
-              <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">50,000 workload units</span><span class="tooltip-text"></span></li>
-            </ul>
-          </section>
-          <!-- Enterprise -->
-          <section class="flex flex-col rounded-3xl p-6 shadow-lg bg-white">
-            <h3 class="flex items-center text-sm font-semibold text-gray-900">
-              <svg class="h-6 w-6 fill-gray-500" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20ZM4 20c0 7.264 5.163 13.321 12.02 14.704C17.642 35.03 19 33.657 19 32V8c0-1.657-1.357-3.031-2.98-2.704C9.162 6.68 4 12.736 4 20Z"/></svg>
-              <span class="ml-4">Enterprise</span>
-            </h3>
-            <p class="mt-5 text-4xl tracking-tight text-gray-900"><span>¢600</span><span class="ml-2 mt-2.5 text-sm text-gray-600">per month</span></p>
-            <ul class="-my-2 divide-y text-sm divide-gray-200 text-gray-700 mt-6">
-              <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">15GB storage</span><span class="tooltip-text"></span></li>
-              <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">100,000 workload units</span><span class="tooltip-text"></span></li>
-            </ul>
-          </section>
-        </div>
-      </div>
-
-      
-    <!-- USSD Shared Code -->
-    <div id="pricing-ussd-shared" class="pricing-section hidden">
-      <div class="bg-slate-50 rounded-[60px] w-[995px] h-[688px] mx-auto">
-
-        <div class="max-w-2xl text-center text-md mx-auto pt-16 px-4">
-          <span>
-            Shortcodes provide a cost-effective solution that allows multiple businesses to offer their services through a single, memorable code. Perfect for enhancing customer engagement and expanding your reach.
-          </span>
-        </div>
-
-        <div class="grid sm:px-6 sm:pb-16 md:grid-cols-2 md:px-8 md:pt-8 lg:p-20 lg:pt-12">
-
-          <!-- Standard Plan -->
-          <div class="relative px-4 py-16 sm:px-10 md:py-12 lg:px-12">
-            <div class="relative flex flex-col">
-              <p class="mt-2 text-md tracking-tight text-slate-600">
-                designed for convenient and cost-effective access to services.
-              </p>
-              <p class="order-first flex font-display font-bold">
-                <span class="mt-1 text-4xl tracking-tight text-slate-900">Standard</span>
-              </p>
-
-              <div class="order-last mt-8">
-                <ul class="-my-2 divide-y text-base tracking-tight divide-slate-200 text-slate-900">
-                  <li class="flex items-center py-2">
-                    <span class="ml-2 me-3">2 Digits</span>
-                    <div class="flex items-center gap-4">
-                      <p class="flex text-4xl font-medium text-black">
-                        <span class="text-[1.75rem] leading-tight me-1 text-slate-500">¢</span>350
-                      </p>
-                      <div class="text-sm/5 text-black"><p>per month</p></div>
-                    </div>
-                  </li>
-                  <li class="flex items-center py-2">
-                    <span class="ml-2 me-3">3 Digits</span>
-                    <div class="flex items-center gap-4">
-                      <p class="flex text-4xl font-medium text-black">
-                        <span class="text-[1.75rem] leading-tight me-1 text-slate-500">¢</span>250
-                      </p>
-                      <div class="text-sm/5 text-black"><p>per month</p></div>
-                    </div>
-                  </li>
-                  <li class="flex items-center py-2">
-                    <span class="ml-2 me-3">4 Digits</span>
-                    <div class="flex items-center gap-4">
-                      <p class="flex text-4xl font-medium text-gray-950">
-                        <span class="text-[1.75rem] leading-tight me-1 text-slate-500">¢</span>200
-                      </p>
-                      <div class="text-sm/5 text-black"><p>per month</p></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-                    <!-- Premium Plan -->
-                    <div class="relative px-4 py-16 sm:rounded-[60px] sm:px-10 md:py-12 lg:px-12 bg-gray-900 sm:shadow-lg">
-            <!-- Pattern background -->
-            <div class="absolute inset-0 text-white/10 [mask-image:linear-gradient(white,transparent)]">
-              <svg aria-hidden="true" class="absolute inset-0 h-full w-full">
-                <defs>
-                  <pattern id="pattern-premium" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="50%">
-                    <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#pattern-premium)"></rect>
-              </svg>
-            </div>
-
-            <!-- Content -->
-            <div class="relative flex flex-col text-white">
-              <p class="flex font-display font-bold">
-                <span class="mt-1 text-4xl tracking-tight">Premium</span>
-              </p>
-
-              <p class="mt-2 text-lg tracking-tight">
-                Greater memorability and prestige for an enhanced user experience.
-              </p>
-
-              <!-- Pricing list -->
-              <div class="order-last mt-8">
-                <ul class="-my-2 divide-y text-base tracking-tight divide-white/10 text-white">
-                  <li class="flex items-center py-2">
-                    <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                      <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                    </svg>
-                    <span class="ml-2 me-3">1 Digit</span>
-                    <div class="flex items-center gap-4">
-                      <p class="flex text-4xl font-medium text-white">
-                        <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>600
-                      </p>
-                      <div class="text-sm/5 text-white">
-                        <p>per month</p>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="flex items-center py-2">
-                    <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                      <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                    </svg>
-                    <span class="ml-2 me-3">2 Digits</span>
-                    <div class="flex items-center gap-4">
-                      <p class="flex text-4xl font-medium text-white">
-                        <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>450
-                      </p>
-                      <div class="text-sm/5 text-white">
-                        <p>per month</p>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="flex items-center py-2">
-                    <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                      <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                    </svg>
-                    <span class="ml-2 me-3">3 Digits</span>
-                    <div class="flex items-center gap-4">
-                      <p class="flex text-4xl font-medium text-white">
-                        <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>350
-                      </p>
-                      <div class="text-sm/5 text-white">
-                        <p>per month</p>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="flex items-center py-2">
-                    <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                      <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                    </svg>
-                    <span class="ml-2 me-3">4 Digits</span>
-                    <div class="flex items-center gap-4">
-                      <p class="flex text-4xl font-medium text-white">
-                        <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>300
-                      </p>
-                      <div class="text-sm/5 text-white">
-                        <p>per month</p>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div> <!-- END grid -->
-      </div>  
-    </div>
-        
-
-    <!-- Dedicated Code -->
-    <div id="pricing-dedicated" class="pricing-section hidden">
-      <div class="bg-slate-50 rounded-[60px] w-[990px] h-[680px] mx-auto">
-        <div class="grid sm:px-6 sm:pb-16 md:grid-cols-2 md:px-8 md:pt-8 lg:p-20 lg:pt-12">
-
-          <div class="relative px-4 py-16 sm:rounded-5xl sm:px-10 md:py-12 lg:px-12">
-          <div class="relative flex flex-col">
-            <h3 class="mt-7 text-lg font-medium tracking-tight text-slate-900">
-              Want a dedicated Short-Code?
-            </h3>
-
-            <div class="mt-2 text-lg tracking-tight text-slate-600"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-              <p>We do all the heavy lifting, from compliance to network integration.</p>
-              <p class="mt-8">
-                Pricing for dedicated short-codes may vary based on the USSD code selected and respective network and are subject to change without prior notice.
-              </p>
-            </div>
-
-            <div class="order-last mt-8">
-              <ul class="-my-2 divide-y text-base tracking-tight divide-slate-200 text-slate-900">
-                <!-- Add list items here if needed -->
-              </ul>
-            </div>
-          </div>
-        </div>
-                <div class="relative px-4 py-16 sm:rounded-[60px] sm:px-10 md:py-12 lg:px-12 bg-blue-600 sm:shadow-lg">
-          <!-- Background pattern -->
-          <div class="absolute inset-0 text-white/10 [mask-image:linear-gradient(white,transparent)]">
-            <svg aria-hidden="true" class="absolute inset-0 h-full w-full">
-              <defs>
-                <pattern id="pattern-dedicated" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="50%">
-                  <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#pattern-dedicated)"></rect>
-            </svg>
-          </div>
-
-          <!-- Content -->
-          <div class="relative flex flex-col text-white">
-            <p class="order-first flex font-display font-bold">
-              <span class="mt-1 text-4xl tracking-tight">Dedicated USSD Short-Codes</span>
-            </p>
-
-            <p class="mt-2 text-lg tracking-tight">
-              Position your business for seamless, professional customer engagement.
-            </p>
-
-            <div class="mt-8 w-full">
-              <div class="inline-flex w-full justify-center rounded-md py-1 px-4 text-base font-semibold tracking-tight shadow-sm bg-white text-blue-600">
-                Features
-              </div>
-            </div>
-
-            <div class="order-last mt-8">
-              <ul class="-my-2 divide-y text-base tracking-tight divide-white/10 text-white">
-                <li class="flex py-2">
-                  <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                    <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                  </svg>
-                  <span class="ml-4">Custom short-code to match your brand</span>
-                </li>
-
-                <li class="flex py-2">
-                  <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                    <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                  </svg>
-                  <span class="ml-4">Endless extensions at your disposal</span>
-                </li>
-
-                <li class="flex py-2">
-                  <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                    <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                  </svg>
-                  <span class="ml-4">Earn passive revenue by reselling your extensions as shared codes with us</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> 
-
-        <!-- ✅ CTA for Dedicated Code -->
-        <div class="mt-10 flex justify-center">
-          <a href="https://app.uzoussd.com/app/register"
-            class="px-12 py-3 rounded-full text-white font-bold text-xl bg-gradient-to-b from-yellow-400 via-orange-500 to-orange-600 shadow-lg hover:opacity-90 transition">
-            Get Started
+  <div class="flex flex-col min-h-screen justify-between">
+    <div class="grow flex flex-col">
+      <nav id="main-nav" class="flex items-center justify-between p-6 lg:px-8 transition-all duration-300" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a class="-m-1.5 p-1.5" href="/">
+            <span class="text-2xl font-bold logo-text">Uzo</span> <!-- Changed to black -->
           </a>
         </div>
-      
+        <div class="flex lg:hidden">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <img class="h-6 w-6" aria-hidden="true" alt="menu" src="images/menu.svg">
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-8 lg:justify-end items-center pr-6 border-r border-lightgrey">
+          <a class="nav-link text-sm leading-6 text-gray-700 font-bold transition duration-300" href="index.html" id="home-link">Home</a>
+          <a class="nav-link text-sm leading-6 text-gray-600 font-bold transition duration-300" href="" id="pricing-link">Pricing</a>
+          <a class="nav-link text-sm leading-6 text-gray-600 font-bold transition duration-300" href="faq.html" id="faq-link">FAQ</a>
+          <a class="nav-link text-sm leading-6 text-gray-600 font-bold transition duration-300" href="contact.html" id="contact-link">Contact Us</a>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-8 lg:justify-end items-center ml-6">
+          <a class="text-md text-orange-400 font-bold" href="https://app.uzoussd.com/app/login">Log in</a>
+          <a class="rounded-full bg-orange-400 text-white px-6 py-2 border drop-shadow font-bold" href="https://app.uzoussd.com/app/register">Get Started</a> <!-- Text remains white -->
+        </div>
+      </nav>
 
-
-      <!-- JavaScript -->
+      <!-- JavaScript for scroll detection and active link -->
       <script>
-        const tabs = document.querySelectorAll('.tab-btn');
-        const sections = document.querySelectorAll('.pricing-section');
-        const highlight = document.getElementById('highlight');
+        // Scroll detection
+        window.addEventListener('scroll', () => {
+          const nav = document.getElementById('main-nav');
+          if (window.scrollY > 50) {
+            nav.classList.add('navbar-sticky');
+          } else {
+            nav.classList.remove('navbar-sticky');
+          }
+        });
 
-        tabs.forEach((tab, i) => {
-          tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active', 'text-white'));
-            sections.forEach(s => s.classList.add('hidden'));
-            tab.classList.add('active', 'text-white');
-            document.getElementById('pricing-' + tab.id).classList.remove('hidden');
-            highlight.style.transform = `translateX(${i * 100}%)`;
-          });
+        // Set active link based on current page
+        document.addEventListener('DOMContentLoaded', () => {
+          const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+          console.log('Current page detected:', currentPage);
+          const links = {
+            'index.html': document.getElementById('home-link'),
+            'pricing.html': document.getElementById('pricing-link'),
+            'faq.html': document.getElementById('faq-link'),
+            'contact.html': document.getElementById('contact-link')
+          };
+
+          for (const [page, link] of Object.entries(links)) {
+            if (page === currentPage) {
+              if (link) {
+                link.classList.add('active');
+                console.log('Active link set to:', link.textContent);
+              } else {
+                console.error('Link not found for page:', page);
+              }
+              break;
+            }
+          }
         });
       </script>
     
 
-  </div>
-</section>
+      <!--  PRICING SECTION  -->
+      <section id="pricing" class="border-t border-gray-200 bg-gray-100 py-20 sm:py-32">
+        <div class="mx-auto max-w-2xl text-center px-4" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;" >
+          <h2 class="text-5xl font-medium tracking-tight bg-gradient-to-b from-yellow-400 to-orange-500 bg-clip-text text-transparent pb-3">
+            Simple pricing, for everyone.
+          </h2>
+          <p class="mt-2 text-md text-gray-600">
+            Choose a package that meets your needs. Whether you're just getting started or looking for complex integration, <b>Uzo</b> has what you need.
+          </p>
+        </div>
 
-<!-- More than Clients Section -->
-<section class="py-24 relative rounded-xl bg-white">
-  <div class="text-center font-bold text-4xl md:text-[40px] mb-12">
-    More than clients, they’re believers.
-  </div>
+        
+          <!-- Toggle Buttons -->
+      <div class="flex justify-center mt-10">
+      <div class="relative inline-grid grid-cols-3 rounded-[14px] overflow-hidden border border-gray-300 bg-white w-[560px] mx-auto shadow-md">
+        
+        <!-- Orange highlight -->
+        <div id="highlight"
+          class="absolute inset-0 bg-[#FF7A00] transition-transform duration-300 ease-in-out"
+          style="transform: translateX(0); width: 33.33%; z-index: 5;">
+        </div>
 
-  <div class="relative overflow-x-auto">
-    <div class="container mx-auto flex justify-center">
-      <div class="grid grid-flow-col auto-cols-max gap-6 items-center">
-        <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/FIDO-logo.webp" alt="Fido"></div>
-        <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/Fastcare_logo.png" alt="Fastcare"></div>
-        <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/login-img2.png" alt="Nationwide"></div>
-        <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/antcellular.jpg" alt="Ant Cellular"></div>
-        <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/megacash.png" alt="Mega Cash"></div>
-        <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/elgiga.png" alt="El Giga Farms"></div>
+        <!-- Buttons -->
+        <button id="app-builder"
+          class="tab-btn active relative py-[15px] px-[11px] text-[18px] text-white z-10 font-normal"
+          style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
+          App Builder
+        </button>
+
+        <button id="ussd-shared"
+          class="tab-btn relative py-[15px] px-[11px] text-[18px] text-gray-700 z-10 font-normal"
+          style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
+          USSD Shared Code
+        </button>
+
+        <button id="dedicated"
+          class="tab-btn relative py-[15px] px-[11px] text-[18px] text-gray-700 z-10 font-normal"
+          style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
+          Dedicated Code
+        </button>
+
+        <!-- Dividers -->
+        <div class="absolute inset-y-0 w-px bg-gray-300 z-0" style="left: 33.33%;"></div>
+        <div class="absolute inset-y-0 w-px bg-gray-300 z-0" style="left: 66.66%;"></div>
       </div>
     </div>
-  </div>
-</section>
 
-<footer class="py-16 bg-[#242424]">
-  <div class="flex flex-col md:flex-row items-center md:items-start ml-4 md:ml-12">
-    <!-- Logo -->
-    <a href="/" class="text-lg text-orange-400 font-bold mb-4 md:mb-0">UZO</a>
 
-    <!-- Links -->
-    <div class="flex space-x-8 pl-0 md:pl-8">
-      <a href="/terms" class="text-xs leading-6 text-white font-normal">Terms and Conditions</a>
-      <a href="/privacy" class="text-xs leading-6 text-white font-normal">Privacy Policy</a>
-      <a href="/contact" class="text-xs leading-6 text-white font-normal">Contact Us</a>
+
+        <!-- Pricing Content -->
+        <div class="mt-16 max-w-7xl mx-auto px-4">
+          <!-- APP BUILDER -->
+          <div id="pricing-app-builder" class="pricing-section">
+            <div class="grid gap-8 lg:grid-cols-3 lg:gap-10 max-w-2xl mx-auto lg:max-w-none">
+              <!-- Starter -->
+              <section class="flex flex-col rounded-3xl p-6 shadow-lg bg-white">
+                <h3 class="flex items-center text-sm font-semibold text-gray-900">
+                  <svg class="h-6 w-6 fill-gray-300" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20ZM4 20c0 7.264 5.163 13.321 12.02 14.704C17.642 35.03 19 33.657 19 32V8c0-1.657-1.357-3.031-2.98-2.704C9.162 6.68 4 12.736 4 20Z"/></svg>
+                  <span class="ml-4">Starter</span>
+                </h3>
+                <p class="mt-5 text-4xl tracking-tight text-gray-900"><span>¢60</span><span class="ml-2 mt-2.5 text-sm text-gray-600">per month</span></p>
+                <ul class="-my-2 divide-y text-sm divide-gray-200 text-gray-700 mt-6">
+                  <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">1GB storage</span><span class="tooltip-text"></span></li>
+                  <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">5,000 workload units</span><span class="tooltip-text"></span></li>
+                </ul>
+              </section>
+              <!-- Starter Plus (Featured) -->
+              <section class="flex flex-col rounded-3xl p-6 shadow-lg order-first lg:order-none bg-gray-900 text-white">
+                <h3 class="flex items-center text-sm font-semibold">
+                  <svg class="h-6 w-6 fill-orange-400" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20ZM4 20c0 7.264 5.163 13.321 12.02 14.704C17.642 35.03 19 33.657 19 32V8c0-1.657-1.357-3.031-2.98-2.704C9.162 6.68 4 12.736 4 20Z"/></svg>
+                  <span class="ml-4">Starter Plus</span>
+                </h3>
+                <p class="mt-5 text-4xl tracking-tight"><span>¢100</span><span class="ml-2 mt-2.5 text-sm text-gray-300">per month</span></p>
+                <ul class="-my-2 divide-y text-sm divide-gray-800 text-gray-300 mt-6">
+                  <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">2GB storage</span><span class="tooltip-text"></span></li>
+                  <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">10,000 workload units</span><span class="tooltip-text"></span></li>
+                </ul>
+              </section>
+              <!-- Standard -->
+              <section class="flex flex-col rounded-3xl p-6 shadow-lg bg-white">
+                <h3 class="flex items-center text-sm font-semibold text-gray-900">
+                  <svg class="h-6 w-6 fill-gray-300" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20ZM4 20c0 7.264 5.163 13.321 12.02 14.704C17.642 35.03 19 33.657 19 32V8c0-1.657-1.357-3.031-2.98-2.704C9.162 6.68 4 12.736 4 20Z"/></svg>
+                  <span class="ml-4">Standard</span>
+                </h3>
+                <p class="mt-5 text-4xl tracking-tight text-gray-900"><span>¢200</span><span class="ml-2 mt-2.5 text-sm text-gray-600">per month</span></p>
+                <ul class="-my-2 divide-y text-sm divide-gray-200 text-gray-700 mt-6">
+                  <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">3GB storage</span><span class="tooltip-text"></span></li>
+                  <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">20,000 workload units</span><span class="tooltip-text"></span></li>
+                </ul>
+              </section>
+              <!-- Standard Plus -->
+              <section class="flex flex-col rounded-3xl p-6 shadow-lg bg-white">
+                <h3 class="flex items-center text-sm font-semibold text-gray-900">
+                  <svg class="h-6 w-6 fill-gray-300" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20ZM4 20c0 7.264 5.163 13.321 12.02 14.704C17.642 35.03 19 33.657 19 32V8c0-1.657-1.357-3.031-2.98-2.704C9.162 6.68 4 12.736 4 20Z"/></svg>
+                  <span class="ml-4">Standard Plus</span>
+                </h3>
+                <p class="mt-5 text-4xl tracking-tight text-gray-900"><span>¢280</span><span class="ml-2 mt-2.5 text-sm text-gray-600">per month</span></p>
+                <ul class="-my-2 divide-y text-sm divide-gray-200 text-gray-700 mt-6">
+                  <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">5GB storage</span><span class="tooltip-text"></span></li>
+                  <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">30,000 workload units</span><span class="tooltip-text"></span></li>
+                </ul>
+              </section>
+              <!-- Professional -->
+              <section class="flex flex-col rounded-3xl p-6 shadow-lg bg-white">
+                <h3 class="flex items-center text-sm font-semibold text-gray-900">
+                  <svg class="h-6 w-6 fill-gray-500" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20ZM4 20c0 7.264 5.163 13.321 12.02 14.704C17.642 35.03 19 33.657 19 32V8c0-1.657-1.357-3.031-2.98-2.704C9.162 6.68 4 12.736 4 20Z"/></svg>
+                  <span class="ml-4">Professional</span>
+                </h3>
+                <p class="mt-5 text-4xl tracking-tight text-gray-900"><span>¢350</span><span class="ml-2 mt-2.5 text-sm text-gray-600">per month</span></p>
+                <ul class="-my-2 divide-y text-sm divide-gray-200 text-gray-700 mt-6">
+                  <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">10GB storage</span><span class="tooltip-text"></span></li>
+                  <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">50,000 workload units</span><span class="tooltip-text"></span></li>
+                </ul>
+              </section>
+              <!-- Enterprise -->
+              <section class="flex flex-col rounded-3xl p-6 shadow-lg bg-white">
+                <h3 class="flex items-center text-sm font-semibold text-gray-900">
+                  <svg class="h-6 w-6 fill-gray-500" viewBox="0 0 40 40"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C8.954 40 0 31.046 0 20S8.954 0 20 0s20 8.954 20 20-8.954 20-20 20ZM4 20c0 7.264 5.163 13.321 12.02 14.704C17.642 35.03 19 33.657 19 32V8c0-1.657-1.357-3.031-2.98-2.704C9.162 6.68 4 12.736 4 20Z"/></svg>
+                  <span class="ml-4">Enterprise</span>
+                </h3>
+                <p class="mt-5 text-4xl tracking-tight text-gray-900"><span>¢600</span><span class="ml-2 mt-2.5 text-sm text-gray-600">per month</span></p>
+                <ul class="-my-2 divide-y text-sm divide-gray-200 text-gray-700 mt-6">
+                  <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">15GB storage</span><span class="tooltip-text"></span></li>
+                  <li class="flex py-2 items-center tooltip"><svg class="h-6 w-6 text-cyan-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="ml-4">100,000 workload units</span><span class="tooltip-text"></span></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+
+          
+        <!-- USSD Shared Code -->
+        <div id="pricing-ussd-shared" class="pricing-section hidden">
+          <div class="bg-slate-50 rounded-[60px] w-[995px] h-[688px] mx-auto">
+
+            <div class="max-w-2xl text-center text-md mx-auto pt-16 px-4">
+              <span>
+                Shortcodes provide a cost-effective solution that allows multiple businesses to offer their services through a single, memorable code. Perfect for enhancing customer engagement and expanding your reach.
+              </span>
+            </div>
+
+            <div class="grid sm:px-6 sm:pb-16 md:grid-cols-2 md:px-8 md:pt-8 lg:p-20 lg:pt-12">
+
+              <!-- Standard Plan -->
+              <div class="relative px-4 py-16 sm:px-10 md:py-12 lg:px-12">
+                <div class="relative flex flex-col">
+                  <p class="mt-2 text-md tracking-tight text-slate-600">
+                    designed for convenient and cost-effective access to services.
+                  </p>
+                  <p class="order-first flex font-display font-bold">
+                    <span class="mt-1 text-4xl tracking-tight text-slate-900">Standard</span>
+                  </p>
+
+                  <div class="order-last mt-8">
+                    <ul class="-my-2 divide-y text-base tracking-tight divide-slate-200 text-slate-900">
+                      <li class="flex items-center py-2">
+                        <span class="ml-2 me-3">2 Digits</span>
+                        <div class="flex items-center gap-4">
+                          <p class="flex text-4xl font-medium text-black">
+                            <span class="text-[1.75rem] leading-tight me-1 text-slate-500">¢</span>350
+                          </p>
+                          <div class="text-sm/5 text-black"><p>per month</p></div>
+                        </div>
+                      </li>
+                      <li class="flex items-center py-2">
+                        <span class="ml-2 me-3">3 Digits</span>
+                        <div class="flex items-center gap-4">
+                          <p class="flex text-4xl font-medium text-black">
+                            <span class="text-[1.75rem] leading-tight me-1 text-slate-500">¢</span>250
+                          </p>
+                          <div class="text-sm/5 text-black"><p>per month</p></div>
+                        </div>
+                      </li>
+                      <li class="flex items-center py-2">
+                        <span class="ml-2 me-3">4 Digits</span>
+                        <div class="flex items-center gap-4">
+                          <p class="flex text-4xl font-medium text-gray-950">
+                            <span class="text-[1.75rem] leading-tight me-1 text-slate-500">¢</span>200
+                          </p>
+                          <div class="text-sm/5 text-black"><p>per month</p></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+                        <!-- Premium Plan -->
+                        <div class="relative px-4 py-16 sm:rounded-[60px] sm:px-10 md:py-12 lg:px-12 bg-gray-900 sm:shadow-lg">
+                <!-- Pattern background -->
+                <div class="absolute inset-0 text-white/10 [mask-image:linear-gradient(white,transparent)]">
+                  <svg aria-hidden="true" class="absolute inset-0 h-full w-full">
+                    <defs>
+                      <pattern id="pattern-premium" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="50%">
+                        <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
+                      </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#pattern-premium)"></rect>
+                  </svg>
+                </div>
+
+                <!-- Content -->
+                <div class="relative flex flex-col text-white">
+                  <p class="flex font-display font-bold">
+                    <span class="mt-1 text-4xl tracking-tight">Premium</span>
+                  </p>
+
+                  <p class="mt-2 text-lg tracking-tight">
+                    Greater memorability and prestige for an enhanced user experience.
+                  </p>
+
+                  <!-- Pricing list -->
+                  <div class="order-last mt-8">
+                    <ul class="-my-2 divide-y text-base tracking-tight divide-white/10 text-white">
+                      <li class="flex items-center py-2">
+                        <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                          <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
+                        </svg>
+                        <span class="ml-2 me-3">1 Digit</span>
+                        <div class="flex items-center gap-4">
+                          <p class="flex text-4xl font-medium text-white">
+                            <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>600
+                          </p>
+                          <div class="text-sm/5 text-white">
+                            <p>per month</p>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="flex items-center py-2">
+                        <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                          <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
+                        </svg>
+                        <span class="ml-2 me-3">2 Digits</span>
+                        <div class="flex items-center gap-4">
+                          <p class="flex text-4xl font-medium text-white">
+                            <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>450
+                          </p>
+                          <div class="text-sm/5 text-white">
+                            <p>per month</p>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="flex items-center py-2">
+                        <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                          <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
+                        </svg>
+                        <span class="ml-2 me-3">3 Digits</span>
+                        <div class="flex items-center gap-4">
+                          <p class="flex text-4xl font-medium text-white">
+                            <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>350
+                          </p>
+                          <div class="text-sm/5 text-white">
+                            <p>per month</p>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="flex items-center py-2">
+                        <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                          <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
+                        </svg>
+                        <span class="ml-2 me-3">4 Digits</span>
+                        <div class="flex items-center gap-4">
+                          <p class="flex text-4xl font-medium text-white">
+                            <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>300
+                          </p>
+                          <div class="text-sm/5 text-white">
+                            <p>per month</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- END grid -->
+          </div>  
+        </div>
+
+            
+
+        <!-- Dedicated Code -->
+        <div id="pricing-dedicated" class="pricing-section hidden">
+          <div class="bg-slate-50 rounded-[60px] w-[990px] h-[680px] mx-auto">
+            <div class="grid sm:px-6 sm:pb-16 md:grid-cols-2 md:px-8 md:pt-8 lg:p-20 lg:pt-12">
+
+              <div class="relative px-4 py-16 sm:rounded-5xl sm:px-10 md:py-12 lg:px-12">
+              <div class="relative flex flex-col">
+                <h3 class="mt-7 text-lg font-medium tracking-tight text-slate-900">
+                  Want a dedicated Short-Code?
+                </h3>
+
+                <div class="mt-2 text-lg tracking-tight text-slate-600"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                  <p>We do all the heavy lifting, from compliance to network integration.</p>
+                  <p class="mt-8">
+                    Pricing for dedicated short-codes may vary based on the USSD code selected and respective network and are subject to change without prior notice.
+                  </p>
+                </div>
+
+                <div class="order-last mt-8">
+                  <ul class="-my-2 divide-y text-base tracking-tight divide-slate-200 text-slate-900">
+                    <!-- Add list items here if needed -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+                    <div class="relative px-4 py-16 sm:rounded-[60px] sm:px-10 md:py-12 lg:px-12 bg-blue-600 sm:shadow-lg">
+              <!-- Background pattern -->
+              <div class="absolute inset-0 text-white/10 [mask-image:linear-gradient(white,transparent)]">
+                <svg aria-hidden="true" class="absolute inset-0 h-full w-full">
+                  <defs>
+                    <pattern id="pattern-dedicated" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="50%">
+                      <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#pattern-dedicated)"></rect>
+                </svg>
+              </div>
+
+              <!-- Content -->
+              <div class="relative flex flex-col text-white">
+                <p class="order-first flex font-display font-bold">
+                  <span class="mt-1 text-4xl tracking-tight">Dedicated USSD Short-Codes</span>
+                </p>
+
+                <p class="mt-2 text-lg tracking-tight">
+                  Position your business for seamless, professional customer engagement.
+                </p>
+
+                <div class="mt-8 w-full">
+                  <div class="inline-flex w-full justify-center rounded-md py-1 px-4 text-base font-semibold tracking-tight shadow-sm bg-white text-blue-600">
+                    Features
+                  </div>
+                </div>
+
+                <div class="order-last mt-8">
+                  <ul class="-my-2 divide-y text-base tracking-tight divide-white/10 text-white">
+                    <li class="flex py-2">
+                      <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                        <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
+                      </svg>
+                      <span class="ml-4">Custom short-code to match your brand</span>
+                    </li>
+
+                    <li class="flex py-2">
+                      <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                        <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
+                      </svg>
+                      <span class="ml-4">Endless extensions at your disposal</span>
+                    </li>
+
+                    <li class="flex py-2">
+                      <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                        <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
+                      </svg>
+                      <span class="ml-4">Earn passive revenue by reselling your extensions as shared codes with us</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+
+            <!-- ✅ CTA for Dedicated Code -->
+            <div class="mt-10 flex justify-center">
+              <a href="https://app.uzoussd.com/app/register"
+                class="px-12 py-3 rounded-full text-white font-bold text-xl bg-gradient-to-b from-yellow-400 via-orange-500 to-orange-600 shadow-lg hover:opacity-90 transition">
+                Get Started
+              </a>
+            </div>
+          
+
+
+          <!-- JavaScript -->
+          <script>
+            const tabs = document.querySelectorAll('.tab-btn');
+            const sections = document.querySelectorAll('.pricing-section');
+            const highlight = document.getElementById('highlight');
+
+            tabs.forEach((tab, i) => {
+              tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active', 'text-white'));
+                sections.forEach(s => s.classList.add('hidden'));
+                tab.classList.add('active', 'text-white');
+                document.getElementById('pricing-' + tab.id).classList.remove('hidden');
+                highlight.style.transform = `translateX(${i * 100}%)`;
+              });
+            });
+          </script>
+        
+
+      </div>
+    </section>
+
+
+    <!-- More than Clients Section -->
+        <div class="bg-white">
+          <div class="py-24 relative rounded-xl">
+            <div class="font-bold text-[40px] text-center">
+            More than clients, they’re believers.
+            </div>
+          </div>  
+
+          <div class="relative overflow-x-auto">
+            <div class="container mx-auto flex justify-center">
+              <div class="grid grid-flow-col auto-cols-max gap-6 items-center">
+                <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/FIDO-logo.webp" alt="Fido"></div>
+                <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/Fastcare_logo.png" alt="Fastcare"></div>
+                <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/login-img2.png" alt="Nationwide"></div>
+                <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/antcellular.jpg" alt="Ant Cellular"></div>
+                <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/megacash.png" alt="Mega Cash"></div>
+                <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/elgiga.png" alt="El Giga Farms"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>  
+
+      
+      <!-- FOOTER -->
+      <footer class="py-16 bg-[#242424]">
+        <div class="flex flex-col md:flex-row items-center md:items-start ml-4 md:ml-12">
+          <a href="/" class="text-lg text-orange-400 font-bold mb-4 md:mb-0">UZO</a>
+          <div class="flex space-x-8 pl-0 md:pl-8">
+            <a href="/terms" class="text-xs leading-6 text-white font-normal">Terms and Conditions</a>
+            <a href="/privacy" class="text-xs leading-6 text-white font-normal">Privacy Policy</a>
+            <a href="/contact" class="text-xs leading-6 text-white font-normal">Contact Us</a>
+          </div>
+        </div>
+        <div class="border-t-2 border-gray-600 mt-6 pt-6 md:ml-24 px-4 md:px-6 text-gray-400 text-xs text-center md:text-left">
+          copyright © 2025 Uzo. All rights reserved.
+        </div>
+      </footer>
     </div>
   </div>
-
-  <!-- Copyright -->
-  <div class="border-t-2 border-gray-600 mt-6 pt-6 md:ml-24 px-4 md:px-6 text-gray-400 text-xs text-center md:text-left">
-    © 2025 Uzo. All rights reserved.
-  </div>
-</footer>
 </body>
 </html>
-
-
