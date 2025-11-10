@@ -581,7 +581,7 @@
        <!-- USSD Shared Code -->
 <div id="pricing-ussd-shared" class="pricing-section hidden">
   <div class="bg-slate-50 rounded-[60px] w-[995px] h-[688px] mx-auto">
-    <div class="max-w-2xl text-center text-md mx-auto pt-16 px-4">
+    <div class="max-w-2xl text-center text-lg mx-auto pt-16 px-4" style="font-family: Arial, Helvetica, sans-serif;">
       <span>
         Shortcodes provide a cost-effective solution that allows multiple businesses to offer their services through a single, memorable code. Perfect for enhancing customer engagement and expanding your reach.
       </span>
@@ -638,11 +638,11 @@
         <div class="absolute inset-0 text-white/10 [mask-image:linear-gradient(white,transparent)]">
           <svg aria-hidden="true" class="absolute inset-0 h-full w-full">
             <defs>
-              <pattern id="pattern-premium" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="50%">
-                <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
+              <pattern id="pattern-dedicated" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="50%">
+                <path d="M0 0H128" fill="none" stroke="currentColor"></path>
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#pattern-premium)"></rect>
+            <rect width="100%" height="100%" fill="url(#pattern-dedicated)"></rect>
           </svg>
         </div>
 
@@ -652,7 +652,7 @@
             <span class="mt-1 text-4xl tracking-tight">Premium</span>
           </p>
 
-          <p class="mt-2 text-lg tracking-tight">
+          <p class="mt-2 text-md tracking-tight">
             Greater memorability and prestige for an enhanced user experience.
           </p>
 
@@ -751,30 +751,23 @@
               Pricing for dedicated short-codes may vary based on the USSD code selected and respective network and are subject to change without prior notice.
             </p>
           </div>
-
-          <div class="order-last mt-8">
-            <ul class="-my-2 divide-y text-base tracking-tight divide-slate-200 text-slate-900">
-              <!-- Add list items here if needed -->
-            </ul>
-          </div>
         </div>
       </div>
       
-      <div class="relative px-4 py-16 sm:rounded-[60px] sm:px-10 md:py-12 lg:px-12 bg-blue-600 sm:shadow-lg">
-        <!-- Background pattern -->
-        <div class="absolute inset-0 text-white/10 [mask-image:linear-gradient(white,transparent)]">
-          <svg aria-hidden="true" class="absolute inset-0 h-full w-full">
-            <defs>
-              <pattern id="pattern-dedicated" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="50%">
-                <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#pattern-dedicated)"></rect>
-          </svg>
-        </div>
-
-        <!-- Content -->
-        <div class="relative flex flex-col text-white">
+      <div class="relative px-4 py-8 sm:rounded-[60px] sm:px-8 md:py-8 lg:px-10 bg-blue-600 sm:shadow-lg max-w-4xl mx-auto">
+            <!-- Background pattern -->
+          <div class="absolute inset-0 text-white/10 [mask-image:linear-gradient(white,transparent)]">
+            <svg aria-hidden="true" class="absolute inset-0 h-full w-full">
+              <defs>
+                <pattern id="pattern-dedicated" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="50%">
+                  <path d="M0 0H128" fill="none" stroke="currentColor"></path>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#pattern-dedicated)"></rect>
+            </svg>
+          </div>
+            <!-- Content -->
+            <div class="relative flex flex-col text-white">
           <p class="order-first flex font-display font-bold">
             <span class="mt-1 text-4xl tracking-tight">Dedicated USSD Short-Codes</span>
           </p>
@@ -865,9 +858,10 @@
            </div>
             <!-- Content -->
             <div class="relative flex flex-col text-white">
-          <p class="order-first flex justify-center font-display font-bold">
-            <span class="mt-1 text-4xl tracking-tight">Enterprise</span>
+          <p class="order-first flex font-display font-bold">
+            <span class="mt-1 text-4xl tracking-tight">Uzo Enterprise</span>
           </p>
+
 
           <div class="mt-8 w-full flex justify-center">
             <div class="text-white font-semibold tracking-tight text-3xl pb-1 inline-block">
