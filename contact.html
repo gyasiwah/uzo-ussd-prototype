@@ -179,7 +179,11 @@
           </div>
         </div>
         <div class="border-t-2 border-gray-600 mt-6 pt-6 md:ml-24 px-4 md:px-6 text-gray-400 text-xs text-center md:text-left">
-          copyright © 2025 Uzo. All rights reserved.
+          Copyright © <span id="currentYear"></span> Uzo. All rights reserved.
+          <script>
+            // Add this script right before the closing </body> tag
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+          </script>
         </div>
       </footer>
     </div>

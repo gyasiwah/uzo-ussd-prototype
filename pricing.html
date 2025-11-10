@@ -138,41 +138,49 @@
 
         
           <!-- Toggle Buttons -->
-      <div class="flex justify-center mt-10">
-      <div class="relative inline-grid grid-cols-3 rounded-[14px] overflow-hidden border border-gray-300 bg-white w-[560px] mx-auto shadow-md">
-        
-        <!-- Orange highlight -->
-        <div id="highlight"
-          class="absolute inset-0 bg-[#FF7A00] transition-transform duration-300 ease-in-out"
-          style="transform: translateX(0); width: 33.33%; z-index: 5;">
+        <div class="flex justify-center mt-10">
+          <div class="relative inline-grid grid-cols-4 rounded-[14px] overflow-hidden border border-gray-300 bg-white w-[580px] mx-auto shadow-md">
+            
+            <!-- Orange highlight (now 4 columns) -->
+            <div id="highlight"
+                class="absolute inset-0 bg-[#FF7A00] transition-transform duration-300 ease-in-out"
+                style="transform: translateX(0); width: 25%; z-index: 5;">
+            </div>
+
+            <!--  USSD Shared Code -->
+            <button id="app-builder"
+                    class="tab-btn active relative py-[15px] px-[11px] text-[16px] text-white z-10 font-normal"
+                    style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
+              USSD Shared Code
+            </button>
+
+            <!-- App Hosting -->
+            <button id="ussd-shared"
+                    class="tab-btn relative py-[15px] px-[11px] text-[16px] text-gray-700 z-10 font-normal"
+                    style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
+              Uzo App Hosting
+            </button>
+
+            <!-- Dedicated Code -->
+            <button id="dedicated"
+                    class="tab-btn relative py-[15px] px-[11px] text-[16px] text-gray-700 z-10 font-normal"
+                    style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
+              Dedicated Code
+            </button>
+
+            <!-- Enterprise -->
+            <button id="enterprise"
+                    class="tab-btn relative py-[15px] px-[11px] text-[16px] text-gray-700 z-10 font-normal"
+                    style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
+              Enterprise
+            </button>
+
+            <!-- Dividers (now three) -->
+            <div class="absolute inset-y-0 w-px bg-gray-300 z-0" style="left: 25%;"></div>
+            <div class="absolute inset-y-0 w-px bg-gray-300 z-0" style="left: 50%;"></div>
+            <div class="absolute inset-y-0 w-px bg-gray-300 z-0" style="left: 75%;"></div>
+          </div>
         </div>
-
-        <!-- Buttons -->
-        <button id="app-builder"
-          class="tab-btn active relative py-[15px] px-[11px] text-[18px] text-white z-10 font-normal"
-          style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
-          App Builder
-        </button>
-
-        <button id="ussd-shared"
-          class="tab-btn relative py-[15px] px-[11px] text-[18px] text-gray-700 z-10 font-normal"
-          style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
-          USSD Shared Code
-        </button>
-
-        <button id="dedicated"
-          class="tab-btn relative py-[15px] px-[11px] text-[18px] text-gray-700 z-10 font-normal"
-          style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
-          Dedicated Code
-        </button>
-
-        <!-- Dividers -->
-        <div class="absolute inset-y-0 w-px bg-gray-300 z-0" style="left: 33.33%;"></div>
-        <div class="absolute inset-y-0 w-px bg-gray-300 z-0" style="left: 66.66%;"></div>
-      </div>
-    </div>
-
-
 
         <!-- Pricing Content -->
         <div class="mt-16 max-w-7xl mx-auto px-4">
@@ -563,268 +571,366 @@
           </style>
 
 
-        <!-- USSD Shared Code -->
-        <div id="pricing-ussd-shared" class="pricing-section hidden">
-          <div class="bg-slate-50 rounded-[60px] w-[995px] h-[688px] mx-auto">
+       <!-- USSD Shared Code -->
+<div id="pricing-ussd-shared" class="pricing-section hidden">
+  <div class="bg-slate-50 rounded-[60px] w-[995px] h-[688px] mx-auto">
+    <div class="max-w-2xl text-center text-md mx-auto pt-16 px-4">
+      <span>
+        Shortcodes provide a cost-effective solution that allows multiple businesses to offer their services through a single, memorable code. Perfect for enhancing customer engagement and expanding your reach.
+      </span>
+    </div>
 
-            <div class="max-w-2xl text-center text-md mx-auto pt-16 px-4">
-              <span>
-                Shortcodes provide a cost-effective solution that allows multiple businesses to offer their services through a single, memorable code. Perfect for enhancing customer engagement and expanding your reach.
-              </span>
-            </div>
+    <div class="grid sm:px-6 sm:pb-16 md:grid-cols-2 md:px-8 md:pt-8 lg:p-20 lg:pt-12">
+      <!-- Standard Plan -->
+      <div class="relative px-4 py-16 sm:px-10 md:py-12 lg:px-12">
+        <div class="relative flex flex-col">
+          <p class="mt-2 text-md tracking-tight text-slate-600">
+            designed for convenient and cost-effective access to services.
+          </p>
+          <p class="order-first flex font-display font-bold">
+            <span class="mt-1 text-4xl tracking-tight text-slate-900">Standard</span>
+          </p>
 
-            <div class="grid sm:px-6 sm:pb-16 md:grid-cols-2 md:px-8 md:pt-8 lg:p-20 lg:pt-12">
-
-              <!-- Standard Plan -->
-              <div class="relative px-4 py-16 sm:px-10 md:py-12 lg:px-12">
-                <div class="relative flex flex-col">
-                  <p class="mt-2 text-md tracking-tight text-slate-600">
-                    designed for convenient and cost-effective access to services.
+          <div class="order-last mt-8">
+            <ul class="-my-2 divide-y text-base tracking-tight divide-slate-200 text-slate-900">
+              <li class="flex items-center py-2">
+                <span class="ml-2 me-3">2 Digits</span>
+                <div class="flex items-center gap-4">
+                  <p class="flex text-4xl font-medium text-black">
+                    <span class="text-[1.75rem] leading-tight me-1 text-slate-500">¢</span>350
                   </p>
-                  <p class="order-first flex font-display font-bold">
-                    <span class="mt-1 text-4xl tracking-tight text-slate-900">Standard</span>
-                  </p>
-
-                  <div class="order-last mt-8">
-                    <ul class="-my-2 divide-y text-base tracking-tight divide-slate-200 text-slate-900">
-                      <li class="flex items-center py-2">
-                        <span class="ml-2 me-3">2 Digits</span>
-                        <div class="flex items-center gap-4">
-                          <p class="flex text-4xl font-medium text-black">
-                            <span class="text-[1.75rem] leading-tight me-1 text-slate-500">¢</span>350
-                          </p>
-                          <div class="text-sm/5 text-black"><p>per month</p></div>
-                        </div>
-                      </li>
-                      <li class="flex items-center py-2">
-                        <span class="ml-2 me-3">3 Digits</span>
-                        <div class="flex items-center gap-4">
-                          <p class="flex text-4xl font-medium text-black">
-                            <span class="text-[1.75rem] leading-tight me-1 text-slate-500">¢</span>250
-                          </p>
-                          <div class="text-sm/5 text-black"><p>per month</p></div>
-                        </div>
-                      </li>
-                      <li class="flex items-center py-2">
-                        <span class="ml-2 me-3">4 Digits</span>
-                        <div class="flex items-center gap-4">
-                          <p class="flex text-4xl font-medium text-gray-950">
-                            <span class="text-[1.75rem] leading-tight me-1 text-slate-500">¢</span>200
-                          </p>
-                          <div class="text-sm/5 text-black"><p>per month</p></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+                  <div class="text-sm/5 text-black"><p>per month</p></div>
                 </div>
-              </div>
-
-                        <!-- Premium Plan -->
-                        <div class="relative px-4 py-16 sm:rounded-[60px] sm:px-10 md:py-12 lg:px-12 bg-gray-900 sm:shadow-lg">
-                <!-- Pattern background -->
-                <div class="absolute inset-0 text-white/10 [mask-image:linear-gradient(white,transparent)]">
-                  <svg aria-hidden="true" class="absolute inset-0 h-full w-full">
-                    <defs>
-                      <pattern id="pattern-premium" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="50%">
-                        <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
-                      </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#pattern-premium)"></rect>
-                  </svg>
-                </div>
-
-                <!-- Content -->
-                <div class="relative flex flex-col text-white">
-                  <p class="flex font-display font-bold">
-                    <span class="mt-1 text-4xl tracking-tight">Premium</span>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="ml-2 me-3">3 Digits</span>
+                <div class="flex items-center gap-4">
+                  <p class="flex text-4xl font-medium text-black">
+                    <span class="text-[1.75rem] leading-tight me-1 text-slate-500">¢</span>250
                   </p>
-
-                  <p class="mt-2 text-lg tracking-tight">
-                    Greater memorability and prestige for an enhanced user experience.
-                  </p>
-
-                  <!-- Pricing list -->
-                  <div class="order-last mt-8">
-                    <ul class="-my-2 divide-y text-base tracking-tight divide-white/10 text-white">
-                      <li class="flex items-center py-2">
-                        <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                          <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                        </svg>
-                        <span class="ml-2 me-3">1 Digit</span>
-                        <div class="flex items-center gap-4">
-                          <p class="flex text-4xl font-medium text-white">
-                            <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>600
-                          </p>
-                          <div class="text-sm/5 text-white">
-                            <p>per month</p>
-                          </div>
-                        </div>
-                      </li>
-
-                      <li class="flex items-center py-2">
-                        <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                          <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                        </svg>
-                        <span class="ml-2 me-3">2 Digits</span>
-                        <div class="flex items-center gap-4">
-                          <p class="flex text-4xl font-medium text-white">
-                            <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>450
-                          </p>
-                          <div class="text-sm/5 text-white">
-                            <p>per month</p>
-                          </div>
-                        </div>
-                      </li>
-
-                      <li class="flex items-center py-2">
-                        <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                          <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                        </svg>
-                        <span class="ml-2 me-3">3 Digits</span>
-                        <div class="flex items-center gap-4">
-                          <p class="flex text-4xl font-medium text-white">
-                            <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>350
-                          </p>
-                          <div class="text-sm/5 text-white">
-                            <p>per month</p>
-                          </div>
-                        </div>
-                      </li>
-
-                      <li class="flex items-center py-2">
-                        <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                          <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                        </svg>
-                        <span class="ml-2 me-3">4 Digits</span>
-                        <div class="flex items-center gap-4">
-                          <p class="flex text-4xl font-medium text-white">
-                            <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>300
-                          </p>
-                          <div class="text-sm/5 text-white">
-                            <p>per month</p>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
+                  <div class="text-sm/5 text-black"><p>per month</p></div>
                 </div>
-              </div>
-            </div> <!-- END grid -->
-          </div>  
+              </li>
+              <li class="flex items-center py-2">
+                <span class="ml-2 me-3">4 Digits</span>
+                <div class="flex items-center gap-4">
+                  <p class="flex text-4xl font-medium text-gray-950">
+                    <span class="text-[1.75rem] leading-tight me-1 text-slate-500">¢</span>200
+                  </p>
+                  <div class="text-sm/5 text-black"><p>per month</p></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="relative px-4 py-16 sm:rounded-[60px] sm:px-10 md:py-12 lg:px-12 bg-gray-900 sm:shadow-lg">
+        <!-- Pattern background -->
+        <div class="absolute inset-0 text-white/10 [mask-image:linear-gradient(white,transparent)]">
+          <svg aria-hidden="true" class="absolute inset-0 h-full w-full">
+            <defs>
+              <pattern id="pattern-premium" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="50%">
+                <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pattern-premium)"></rect>
+          </svg>
         </div>
 
-            
+        <!-- Content -->
+        <div class="relative flex flex-col text-white">
+          <p class="flex font-display font-bold">
+            <span class="mt-1 text-4xl tracking-tight">Premium</span>
+          </p>
 
-        <!-- Dedicated Code -->
-        <div id="pricing-dedicated" class="pricing-section hidden">
-          <div class="bg-slate-50 rounded-[60px] w-[990px] h-[680px] mx-auto">
-            <div class="grid sm:px-6 sm:pb-16 md:grid-cols-2 md:px-8 md:pt-8 lg:p-20 lg:pt-12">
+          <p class="mt-2 text-lg tracking-tight">
+            Greater memorability and prestige for an enhanced user experience.
+          </p>
 
-              <div class="relative px-4 py-16 sm:rounded-5xl sm:px-10 md:py-12 lg:px-12">
-              <div class="relative flex flex-col">
-                <h3 class="mt-7 text-lg font-medium tracking-tight text-slate-900">
-                  Want a dedicated Short-Code?
-                </h3>
-
-                <div class="mt-2 text-lg tracking-tight text-slate-600"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-                  <p>We do all the heavy lifting, from compliance to network integration.</p>
-                  <p class="mt-8">
-                    Pricing for dedicated short-codes may vary based on the USSD code selected and respective network and are subject to change without prior notice.
-                  </p>
-                </div>
-
-                <div class="order-last mt-8">
-                  <ul class="-my-2 divide-y text-base tracking-tight divide-slate-200 text-slate-900">
-                    <!-- Add list items here if needed -->
-                  </ul>
-                </div>
-              </div>
-            </div>
-                    <div class="relative px-4 py-16 sm:rounded-[60px] sm:px-10 md:py-12 lg:px-12 bg-blue-600 sm:shadow-lg">
-              <!-- Background pattern -->
-              <div class="absolute inset-0 text-white/10 [mask-image:linear-gradient(white,transparent)]">
-                <svg aria-hidden="true" class="absolute inset-0 h-full w-full">
-                  <defs>
-                    <pattern id="pattern-dedicated" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="50%">
-                      <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#pattern-dedicated)"></rect>
+          <!-- Pricing list -->
+          <div class="order-last mt-8">
+            <ul class="-my-2 divide-y text-base tracking-tight divide-white/10 text-white">
+              <li class="flex items-center py-2">
+                <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                  <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
                 </svg>
-              </div>
-
-              <!-- Content -->
-              <div class="relative flex flex-col text-white">
-                <p class="order-first flex font-display font-bold">
-                  <span class="mt-1 text-4xl tracking-tight">Dedicated USSD Short-Codes</span>
-                </p>
-
-                <p class="mt-2 text-lg tracking-tight">
-                  Position your business for seamless, professional customer engagement.
-                </p>
-
-                <div class="mt-8 w-full">
-                  <div class="inline-flex w-full justify-center rounded-md py-1 px-4 text-base font-semibold tracking-tight shadow-sm bg-white text-blue-600">
-                    Features
+                <span class="ml-2 me-3">1 Digit</span>
+                <div class="flex items-center gap-4">
+                  <p class="flex text-4xl font-medium text-white">
+                    <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>600
+                  </p>
+                  <div class="text-sm/5 text-white">
+                    <p>per month</p>
                   </div>
                 </div>
+              </li>
 
-                <div class="order-last mt-8">
-                  <ul class="-my-2 divide-y text-base tracking-tight divide-white/10 text-white">
-                    <li class="flex py-2">
-                      <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                        <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                      </svg>
-                      <span class="ml-4">Custom short-code to match your brand</span>
-                    </li>
-
-                    <li class="flex py-2">
-                      <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                        <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                      </svg>
-                      <span class="ml-4">Endless extensions at your disposal</span>
-                    </li>
-
-                    <li class="flex py-2">
-                      <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
-                        <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
-                      </svg>
-                      <span class="ml-4">Earn passive revenue by reselling your extensions as shared codes with us</span>
-                    </li>
-                  </ul>
+              <li class="flex items-center py-2">
+                <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                  <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
+                </svg>
+                <span class="ml-2 me-3">2 Digits</span>
+                <div class="flex items-center gap-4">
+                  <p class="flex text-4xl font-medium text-white">
+                    <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>450
+                  </p>
+                  <div class="text-sm/5 text-white">
+                    <p>per month</p>
+                  </div>
                 </div>
-              </div>
+              </li>
+
+              <li class="flex items-center py-2">
+                <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                  <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
+                </svg>
+                <span class="ml-2 me-3">3 Digits</span>
+                <div class="flex items-center gap-4">
+                  <p class="flex text-4xl font-medium text-white">
+                    <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>350
+                  </p>
+                  <div class="text-sm/5 text-white">
+                    <p>per month</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="flex items-center py-2">
+                <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                  <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
+                </svg>
+                <span class="ml-2 me-3">4 Digits</span>
+                <div class="flex items-center gap-4">
+                  <p class="flex text-4xl font-medium text-white">
+                    <span class="text-[1.75rem] leading-tight me-1 text-blue-200">¢</span>300
+                  </p>
+                  <div class="text-sm/5 text-white">
+                    <p>per month</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> <!-- END grid -->
+  </div>
+  
+  <!-- Contact Us Button for USSD Shared Code -->
+  <div class="mt-12 flex justify-center">
+    <a href="contact.html"
+      class="bg-gradient-to-b from-yellow-400 to-orange-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300">
+      Contact Us
+    </a>
+  </div>
+</div>
+
+<!-- Dedicated Code -->
+<div id="pricing-dedicated" class="pricing-section hidden">
+  <div class="bg-slate-50 rounded-[60px] w-[990px] h-[680px] mx-auto">
+    <div class="grid sm:px-6 sm:pb-16 md:grid-cols-2 md:px-8 md:pt-8 lg:p-20 lg:pt-12">
+
+      <div class="relative px-4 py-16 sm:rounded-5xl sm:px-10 md:py-12 lg:px-12">
+        <div class="relative flex flex-col">
+          <h3 class="mt-7 text-lg font-medium tracking-tight text-slate-900">
+            Want a dedicated Short-Code?
+          </h3>
+
+          <div class="mt-2 text-lg tracking-tight text-slate-600"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+            <p>We do all the heavy lifting, from compliance to network integration.</p>
+            <p class="mt-8">
+              Pricing for dedicated short-codes may vary based on the USSD code selected and respective network and are subject to change without prior notice.
+            </p>
+          </div>
+
+          <div class="order-last mt-8">
+            <ul class="-my-2 divide-y text-base tracking-tight divide-slate-200 text-slate-900">
+              <!-- Add list items here if needed -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="relative px-4 py-16 sm:rounded-[60px] sm:px-10 md:py-12 lg:px-12 bg-blue-600 sm:shadow-lg">
+        <!-- Background pattern -->
+        <div class="absolute inset-0 text-white/10 [mask-image:linear-gradient(white,transparent)]">
+          <svg aria-hidden="true" class="absolute inset-0 h-full w-full">
+            <defs>
+              <pattern id="pattern-dedicated" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="50%">
+                <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pattern-dedicated)"></rect>
+          </svg>
+        </div>
+
+        <!-- Content -->
+        <div class="relative flex flex-col text-white">
+          <p class="order-first flex font-display font-bold">
+            <span class="mt-1 text-4xl tracking-tight">Dedicated USSD Short-Codes</span>
+          </p>
+
+          <p class="mt-2 text-md tracking-tight">
+            Position your business for seamless, professional customer engagement.
+          </p>
+
+          <div class="mt-8 w-full flex justify-center">
+            <div class="text-white font-semibold tracking-tight text-3xl border-b-4 border-blue-600 pb-1 inline-block">
+              Features
             </div>
           </div>
-        </div> 
 
-            <!-- ✅ CTA for Dedicated Code -->
-            <div class="mt-10 flex justify-center">
-              <a href="https://app.uzoussd.com/app/register"
-                class="px-12 py-3 rounded-full text-white font-bold text-xl bg-gradient-to-b from-yellow-400 via-orange-500 to-orange-600 shadow-lg hover:opacity-90 transition">
-                Get Started
-              </a>
+
+          <div class="order-last mt-8">
+            <ul class="-my-2 divide-y text-base tracking-tight divide-white/10 text-white">
+              <li class="flex py-2">
+                <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                  <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
+                </svg>
+                <span class="ml-4">Custom short-code to match your brand</span>
+              </li>
+
+              <li class="flex py-2">
+                <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                  <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
+                </svg>
+                <span class="ml-4">Endless extensions at your disposal</span>
+              </li>
+
+              <li class="flex py-2">
+                <svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-white">
+                  <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path>
+                </svg>
+                <span class="ml-4">Earn passive revenue by reselling your extensions as shared codes with us</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- CTA -->
+  <div class="mt-12 flex justify-center">
+    <a href="contact.html"
+      class="bg-gradient-to-b from-yellow-400 to-orange-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300">
+      Contact Us
+    </a>
+  </div>
+</div>
+
+    <!-- Enterprise Plan -->
+    <div id="pricing-enterprise" class="pricing-section hidden">
+      <div class="bg-slate-50 rounded-[60px] w-[990px] mx-auto">
+        <div class="grid sm:px-6 sm:pb-8 md:grid-cols-1 md:px-8 md:pt-8 lg:p-12 lg:pt-8">
+          <div class="relative px-4 py-8 sm:rounded-[60px] sm:px-8 md:py-8 lg:px-10 bg-gradient-to-b from-yellow-400 via-orange-500 to-orange-600 sm:shadow-lg max-w-4xl mx-auto">
+            <!-- Background pattern -->
+            <div class="absolute inset-0 text-white/10 [mask-image:linear-gradient(white,transparent)]">
+              <svg aria-hidden="true" class="absolute inset-0 h-full w-full">
+                <defs>
+                  <pattern id="pattern-enterprise" width="128" height="128" patternUnits="userSpaceOnUse" x="50%" y="50%">
+                    <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#pattern-enterprise)"></rect>
+              </svg>
             </div>
-          
 
+            <!-- Content -->
+            <div class="relative flex flex-col text-white text-center">
+              <h3 class="text-4xl font-bold tracking-tight mb-6">Enterprise</h3>
+              
+              <p class="text-5xl font-bold mb-8">
+                Custom
+                <span class="text-xl font-normal text-orange-100">/quote</span>
+              </p>
 
-          <!-- JavaScript -->
-          <script>
-            const tabs = document.querySelectorAll('.tab-btn');
-            const sections = document.querySelectorAll('.pricing-section');
-            const highlight = document.getElementById('highlight');
-
-            tabs.forEach((tab, i) => {
-              tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('active', 'text-white'));
-                sections.forEach(s => s.classList.add('hidden'));
-                tab.classList.add('active', 'text-white');
-                document.getElementById('pricing-' + tab.id).classList.remove('hidden');
-                highlight.style.transform = `translateX(${i * 100}%)`;
-              });
-            });
-          </script>
+              <ul class="space-y-4 text-lg mb-8">
+                <li class="flex items-center justify-center">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white mr-3 flex-none" fill="currentColor">
+                    <path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/>
+                    <circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                  <strong>Your Own Dedicated Instance</strong>
+                </li>
+                <li class="flex items-center justify-center">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white mr-3 flex-none" fill="currentColor">
+                    <path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/>
+                    <circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                  Truly Unlimited USSD Sessions
+                </li>
+                <li class="flex items-center justify-center">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white mr-3 flex-none" fill="currentColor">
+                    <path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/>
+                    <circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                  Custom Branding & White-labeling
+                </li>
+                <li class="flex items-center justify-center">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white mr-3 flex-none" fill="currentColor">
+                    <path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/>
+                    <circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                  Highest Priority Support
+                </li>
+                <li class="flex items-center justify-center">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white mr-3 flex-none" fill="currentColor">
+                    <path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/>
+                    <circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                  Service Level Agreement (SLA) Guarantee
+                </li>
+                <li class="flex items-center justify-center">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white mr-3 flex-none" fill="currentColor">
+                    <path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/>
+                    <circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                  On-premise or Private Cloud Deployment
+                </li>
+                <li class="flex items-center justify-center">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6 text-white mr-3 flex-none" fill="currentColor">
+                    <path d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"/>
+                    <circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                  Dedicated Account Manager
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- Contact Us Button for Dedicated Code -->
+        <div class="mt-12 flex justify-center">
+          <a href="contact.html"
+            class="bg-gradient-to-b from-yellow-400 to-orange-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300">
+            Contact Us
+          </a>
+        </div>
+      </div>
         
+      <script>
+        const tabs      = document.querySelectorAll('.tab-btn');
+        const sections  = document.querySelectorAll('.pricing-section');
+        const highlight = document.getElementById('highlight');
+
+        tabs.forEach((tab, i) => {
+          tab.addEventListener('click', () => {
+            // Reset
+            tabs.forEach(t => t.classList.remove('active', 'text-white'));
+            sections.forEach(s => s.classList.add('hidden'));
+
+            // Activate clicked tab
+            tab.classList.add('active', 'text-white');
+            document.getElementById('pricing-' + tab.id).classList.remove('hidden');
+
+            // Move orange bar (4 columns → 25% each)
+            highlight.style.transform = `translateX(${i * 100}%)`;
+          });
+        });
+     </script>
 
       </div>
     </section>
@@ -832,42 +938,44 @@
 
     <!-- More than Clients Section -->
         <div class="bg-white">
-          <div class="py-24 relative rounded-xl">
-            <div class="font-bold text-[40px] text-center">
-            More than clients, they’re believers.
-            </div>
-          </div>  
+      <div class="py-24 relative rounded-xl">
+        <div class="font-bold text-[40px] text-center">
+         More than clients, they’re believers.
+      </div>
 
-          <div class="relative overflow-x-auto">
-            <div class="container mx-auto flex justify-center">
-              <div class="grid grid-flow-col auto-cols-max gap-6 items-center">
-                <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/FIDO-logo.webp" alt="Fido"></div>
-                <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/Fastcare_logo.png" alt="Fastcare"></div>
-                <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/login-img2.png" alt="Nationwide"></div>
-                <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/antcellular.jpg" alt="Ant Cellular"></div>
-                <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/megacash.png" alt="Mega Cash"></div>
-                <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/elgiga.png" alt="El Giga Farms"></div>
-              </div>
-            </div>
+      <div class="relative overflow-x-auto">
+        <div class="container mx-auto flex justify-center">
+          <div class="grid grid-flow-col auto-cols-max gap-6 items-center">
+            <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/FIDO-logo.webp" alt="Fido"></div>
+            <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/Fastcare_logo.png" alt="Fastcare"></div>
+            <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/login-img2.png" alt="Nationwide"></div>
+            <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/antcellular.jpg" alt="Ant Cellular"></div>
+            <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/megacash.png" alt="Mega Cash"></div>
+            <div class="flex items-center justify-center py-6 px-3"><img class="max-w-32 rounded-sm" src="images/elgiga.png" alt="El Giga Farms"></div>
           </div>
         </div>
+      </div>
     </div>  
 
       
       <!-- FOOTER -->
-      <footer class="py-16 bg-[#242424]">
-        <div class="flex flex-col md:flex-row items-center md:items-start ml-4 md:ml-12">
-          <a href="/" class="text-lg text-orange-400 font-bold mb-4 md:mb-0">UZO</a>
-          <div class="flex space-x-8 pl-0 md:pl-8">
-            <a href="terms.html" class="text-xs leading-6 text-white font-normal">Terms and Conditions</a>
-            <a href="privacy.html" class="text-xs leading-6 text-white font-normal">Privacy Policy</a>
-            <a href="contact.html" class="text-xs leading-6 text-white font-normal">Contact Us</a>
-          </div>
-        </div>
-        <div class="border-t-2 border-gray-600 mt-6 pt-6 md:ml-24 px-4 md:px-6 text-gray-400 text-xs text-center md:text-left">
-          copyright © 2025 Uzo. All rights reserved.
-        </div>
-      </footer>
+     <footer class="py-16 bg-[#242424]">
+    <div class="flex flex-col md:flex-row items-center md:items-start ml-4 md:ml-12">
+      <a href="/" class="text-lg text-orange-400 font-bold mb-4 md:mb-0">UZO</a>
+      <div class="flex space-x-8 pl-0 md:pl-8">
+        <a href="terms.html" class="text-xs leading-6 text-white font-normal">Terms and Conditions</a>
+        <a href="privacy.html" class="text-xs leading-6 text-white font-normal">Privacy Policy</a>
+        <a href="contact.html" class="text-xs leading-6 text-white font-normal">Contact Us</a>
+      </div>
+    </div>
+    <div class="border-t-2 border-gray-600 mt-6 pt-6 md:ml-24 px-4 md:px-6 text-gray-400 text-xs text-center md:text-left">
+     Copyright © <span id="currentYear"></span> Uzo. All rights reserved.
+      <script>
+        // Add this script right before the closing </body> tag
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+      </script>
+    </div>
+  </footer>
     </div>
   </div>
 </body>
