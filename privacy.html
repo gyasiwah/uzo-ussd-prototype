@@ -100,6 +100,10 @@
         <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="">Pricing</a>
         <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="faq.html">FAQ</a>
         <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="contact.html">Contact Us</a>
+        <a class="text-sm leading-6 text-gray-700 font-bold py-4 text-orange-400 transition" href="https://app.uzoussd.com/app/login">Log in</a>
+        <a class="text-sm leading-6 text-gray-700 font-bold py-4 text-orange-400 transition" href="https://app.uzoussd.com/app/register">
+          Get Started
+        </a>
         </div>
 
         <script>
@@ -151,6 +155,20 @@
         });
         </script>
 
+        <script>
+          window.addEventListener('scroll', function() {
+            const menu = document.getElementById('mobile-menu');
+            const scrollY = window.scrollY;
+
+            if (scrollY > 50) { // when user scrolls down 50px
+              menu.classList.add('fixed', 'top-0', 'shadow-md');
+              menu.classList.remove('absolute', 'top-20');
+            } else {
+              menu.classList.add('absolute', 'top-20');
+              menu.classList.remove('fixed', 'top-0', 'shadow-md');
+            }
+          });
+        </script>
 
      
      

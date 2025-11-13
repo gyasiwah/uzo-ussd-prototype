@@ -93,13 +93,63 @@
         </div>
         </nav>
 
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 right-0 px-4 py-4 bg-white w-full flex flex-col shadow-lg z-50">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden absolute top-20 left-0 right-0 px-4 py-4 bg-white w-full flex flex-col shadow-lg z-50">
         <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="index.html">Home</a>
         <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="">Pricing</a>
         <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="faq.html">FAQ</a>
         <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="contact.html">Contact Us</a>
-        </div>
+        <a class="text-sm leading-6 text-gray-700 font-bold py-4 text-orange-400 transition" href="https://app.uzoussd.com/app/login">Log in</a>
+        <a class="text-sm leading-6 text-gray-700 font-bold py-4 text-orange-400 transition" href="https://app.uzoussd.com/app/register">
+          Get Started
+        </a>
+    </div>
+
+        
+      
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab-btn');
+    const pricingSections = document.querySelectorAll('.pricing-section');
+
+    // Function to switch tab
+    function switchTab(tabId) {
+        // Remove active class from all tabs
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+            tab.classList.add('text-gray-700');
+            tab.classList.remove('text-white');
+        });
+
+        // Add active class to the clicked tab
+        const activeTab = document.getElementById(tabId);
+        activeTab.classList.add('active');
+        activeTab.classList.remove('text-gray-700');
+        activeTab.classList.add('text-white');
+
+        // Hide all pricing sections
+        pricingSections.forEach(section => {
+            section.classList.add('hidden');
+            section.classList.remove('active');
+        });
+
+        // Show the active pricing section
+        const activeSection = document.getElementById(`pricing-${tabId}`);
+        activeSection.classList.remove('hidden');
+        activeSection.classList.add('active');
+    }
+
+    // Add click event to each tab
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            switchTab(this.id);
+        });
+    });
+
+    // Initialize the first tab as active
+    switchTab('ussd-shared');
+});
+</script>
 
         <script>
         // Mobile menu toggle
@@ -113,7 +163,7 @@
         }
         </script>
 
-        <!-- JavaScript for scroll detection and active link -->
+        
         <script>
         // Scroll detection
         window.addEventListener('scroll', () => {
@@ -150,6 +200,22 @@
         });
         </script>
 
+        <script>
+          window.addEventListener('scroll', function() {
+            const menu = document.getElementById('mobile-menu');
+            const scrollY = window.scrollY;
+
+            if (scrollY > 50) { // when user scrolls down 50px
+              menu.classList.add('fixed', 'top-0', 'shadow-md');
+              menu.classList.remove('absolute', 'top-20');
+            } else {
+              menu.classList.add('absolute', 'top-20');
+              menu.classList.remove('fixed', 'top-0', 'shadow-md');
+            }
+          });
+        </script>
+
+
 
         <!--  PRICING SECTION  -->
         <section id="pricing" class="border-t border-gray-200 bg-gray-100 py-20 sm:py-32">
@@ -181,7 +247,7 @@
         </button>
 
         <!-- App Hosting -->
-        <button id="app-builder"
+        <button id="app-hosting"
                 class="tab-btn relative py-[15px] px-[11px] text-[16px] text-gray-700 z-10 font-normal"
                 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0px 0px 0px -1px;">
           Uzo App Hosting
@@ -210,8 +276,8 @@
 
         <!-- Pricing Content -->
         <div class="mt-16 max-w-7xl mx-auto px-4">
-        <!-- APP BUILDER -->
-        <div id="pricing-app-builder" class="pricing-section">
+        <!-- Uzo App Hosting-->
+        <div id="pricing-app-hosting" class="pricing-section">
         <div class="grid gap-8 lg:grid-cols-3 lg:gap-10 max-w-2xl mx-auto lg:max-w-none">
           <!-- Starter -->
         <section class="flex flex-col overflow-hidden rounded-3xl p-6 shadow-lg shadow-gray-900/5 bg-white">
