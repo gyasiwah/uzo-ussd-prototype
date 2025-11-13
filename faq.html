@@ -57,94 +57,97 @@
     }
   </style>
 </head>
-<body class="bg-white">
-  <!-- ==================== NAVBAR ==================== -->
-  <nav id="main-nav" class="flex items-center justify-between p-6 lg:px-8 transition-all duration-300" aria-label="Global">
-    <div class="flex lg:flex-1">
-      <a href="/" class="-m-1.5 p-1.5"><span class="text-2xl font-bold logo-text">Uzo</span></a>
-    </div>
+<body>
+  <div id="root">
+    <div class="flex flex-col min-h-screen justify-between bg-white">
+      <div class=" grow flex flex-col">
+        <!-- NAVBAR -->
+        <nav id="main-nav" class="flex items-center justify-between p-6 lg:px-8 transition-all duration-300" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="/" class="-m-1.5 p-1.5"><span class="text-2xl font-bold logo-text">Uzo</span></a>
+          </div>
 
-    <!-- Mobile menu button -->
-    <div class="flex lg:hidden">
-      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-        <span class="sr-only">Open main menu</span>
-        <img class="h-6 w-6" src="images/menu.svg" alt="menu">
-      </button>
-    </div>
+          <!-- Mobile menu button -->
+          <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Open main menu</span>
+              <img class="h-6 w-6" src="images/menu.svg" alt="menu">
+            </button>
+          </div>
 
-    <!-- Desktop links -->
-    <!-- Desktop links -->
-<div class="hidden lg:flex lg:gap-x-8 lg:justify-end items-center pr-6 border-r border-gray-300">
-  <a class="nav-link text-sm leading-6 text-gray-600 font-bold" href="index.html" id="home-link">Home</a>
-  <a class="nav-link text-sm leading-6 text-gray-600 font-bold" href="pricing.html" id="pricing-link">Pricing</a>
-  <a class="nav-link text-sm leading-6 text-gray-600 font-bold" href="faq.html" id="faq-link">FAQ</a>
-  <a class="nav-link text-sm leading-6 text-gray-600 font-bold" href="contact.html" id="contact-link">Contact Us</a>
-</div>
+          
+          <!-- Desktop links -->
+        <div class="hidden lg:flex lg:gap-x-8 lg:justify-end items-center pr-6 border-r border-gray-300">
+          <a class="nav-link text-sm leading-6 text-gray-600 font-bold" href="index.html" id="home-link">Home</a>
+          <a class="nav-link text-sm leading-6 text-gray-600 font-bold" href="pricing.html" id="pricing-link">Pricing</a>
+          <a class="nav-link text-sm leading-6 text-gray-600 font-bold" href="faq.html" id="faq-link">FAQ</a>
+          <a class="nav-link text-sm leading-6 text-gray-600 font-bold" href="contact.html" id="contact-link">Contact Us</a>
+        </div>
 
-<div class="hidden lg:flex lg:gap-x-8 lg:justify-end items-center ml-6">
-  <a class="text-md text-orange-400 font-bold" href="https://app.uzoussd.com/app/login">Log in</a>
-  <a class="rounded-full bg-orange-400 text-white px-6 py-2 border drop-shadow font-bold" href="https://app.uzoussd.com/app/register">Get Started</a>
-</div>
-</nav>
+        <div class="hidden lg:flex lg:gap-x-8 lg:justify-end items-center ml-6">
+          <a class="text-md text-orange-400 font-bold" href="https://app.uzoussd.com/app/login">Log in</a>
+          <a class="rounded-full bg-orange-400 text-white px-6 py-2 border drop-shadow font-bold" href="https://app.uzoussd.com/app/register">Get Started</a>
+        </div>
+        </nav>
 
-<!-- Mobile Menu (Hidden by default) -->
-<div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 right-0 px-4 py-4 bg-white w-full flex flex-col shadow-lg z-50">
-  <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="index.html">Home</a>
-  <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="pricing.html">Pricing</a>
-  <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="">FAQ</a>
-  <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="contact.html">Contact Us</a>
-</div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 right-0 px-4 py-4 bg-white w-full flex flex-col shadow-lg z-50">
+          <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="index.html">Home</a>
+          <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="pricing.html">Pricing</a>
+          <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="">FAQ</a>
+          <a class="text-sm leading-6 text-gray-700 font-bold py-4 hover:text-orange-400 transition" href="contact.html">Contact Us</a>
+        </div>
 
-<script>
-  // Mobile menu toggle
-  const menuButton = document.querySelector('button[type="button"]');
-  const mobileMenu = document.getElementById('mobile-menu');
-  
-  if (menuButton && mobileMenu) {
-    menuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  }
-</script>
-
-      <!-- JavaScript for scroll detection and active link -->
-      <script>
-        // Scroll detection
-        window.addEventListener('scroll', () => {
-          const nav = document.getElementById('main-nav');
-          if (window.scrollY > 50) {
-            nav.classList.add('navbar-sticky');
-          } else {
-            nav.classList.remove('navbar-sticky');
+        <script>
+          // Mobile menu toggle
+          const menuButton = document.querySelector('button[type="button"]');
+          const mobileMenu = document.getElementById('mobile-menu');
+          
+          if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+              mobileMenu.classList.toggle('hidden');
+            });
           }
-        });
+        </script>
 
-        // Set active link based on current page
-        document.addEventListener('DOMContentLoaded', () => {
-          const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-          console.log('Current page detected:', currentPage);
-          const links = {
-            'index.html': document.getElementById('home-link'),
-            'pricing.html': document.getElementById('pricing-link'),
-            'faq.html': document.getElementById('faq-link'),
-            'contact.html': document.getElementById('contact-link')
-          };
-
-          for (const [page, link] of Object.entries(links)) {
-            if (page === currentPage) {
-              if (link) {
-                link.classList.add('active');
-                console.log('Active link set to:', link.textContent);
-              } else {
-                console.error('Link not found for page:', page);
-              }
-              break;
+        <!-- JavaScript for scroll detection and active link -->
+        <script>
+          // Scroll detection
+          window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+              nav.classList.add('navbar-sticky');
+            } else {
+              nav.classList.remove('navbar-sticky');
             }
-          }
-        });
-      </script>
-    
-      <div class="bg-[#343434] pt-4 pb-8">
+          });
+
+          // Set active link based on current page
+          document.addEventListener('DOMContentLoaded', () => {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            console.log('Current page detected:', currentPage);
+            const links = {
+              'index.html': document.getElementById('home-link'),
+              'pricing.html': document.getElementById('pricing-link'),
+              'faq.html': document.getElementById('faq-link'),
+              'contact.html': document.getElementById('contact-link')
+            };
+
+            for (const [page, link] of Object.entries(links)) {
+              if (page === currentPage) {
+                if (link) {
+                  link.classList.add('active');
+                  console.log('Active link set to:', link.textContent);
+                } else {
+                  console.error('Link not found for page:', page);
+                }
+                break;
+              }
+            }
+          });
+        </script>
+      
+        <div class="bg-[#343434] pt-4 pb-8">
         
           <div class="flex justify-center px-4 max-w-6xl mx-auto">
             <div class="grow flex flex-col-reverse lg:flex-row items-center justify-around">
@@ -156,13 +159,13 @@
               </div>
             </div>
           </div>
-      </div>  
+       </div>  
 
         <style>
           .faq-item { border: 1px solid #e5e7eb; transition: border-color 0.3s ease; }
           .faq-item-open { border-color: #f97316; }
           .faq-question { color: #6b7280; transition: color 0.3s ease; }
-          .faq-question-open { color: #f97316; }
+           .faq-question-open { color: #f97316; }
           .faq-answer { color: #9ca3af80; }
           .faq-button { color: #374151; }
           .faq-rounded-top { border-top-left-radius: 0.75rem; border-top-right-radius: 0.75rem; }
@@ -362,42 +365,41 @@
             </div>
           </div>
         
-      </div>
 
-      <script>
-        document.querySelectorAll('button[data-collapse-target]').forEach(button => {
-          const targetId = button.getAttribute('data-collapse-target');
-          const content = document.querySelector(`[data-collapse="${targetId}"]`);
-          const item = button.closest('.faq-item');
-          const question = button.querySelector('.faq-question');
-          button.addEventListener('click', () => {
-            const isOpen = content.classList.contains('h-auto');
-            document.querySelectorAll('.faq-item').forEach(otherItem => {
-              if (otherItem !== item) {
-                otherItem.classList.remove('faq-item-open');
-                otherItem.querySelector('.faq-question').classList.remove('faq-question-open');
-                const otherContent = otherItem.querySelector('[data-collapse]');
-                if (otherContent.classList.contains('h-auto')) {
-                  otherContent.style.height = '0';
-                  otherContent.classList.remove('h-auto');
+        <script>
+          document.querySelectorAll('button[data-collapse-target]').forEach(button => {
+            const targetId = button.getAttribute('data-collapse-target');
+            const content = document.querySelector(`[data-collapse="${targetId}"]`);
+            const item = button.closest('.faq-item');
+            const question = button.querySelector('.faq-question');
+            button.addEventListener('click', () => {
+              const isOpen = content.classList.contains('h-auto');
+              document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                  otherItem.classList.remove('faq-item-open');
+                  otherItem.querySelector('.faq-question').classList.remove('faq-question-open');
+                  const otherContent = otherItem.querySelector('[data-collapse]');
+                  if (otherContent.classList.contains('h-auto')) {
+                    otherContent.style.height = '0';
+                    otherContent.classList.remove('h-auto');
+                  }
                 }
+              });
+              if (isOpen) {
+                item.classList.remove('faq-item-open');
+                question.classList.remove('faq-question-open');
+                content.style.height = '0';
+                content.classList.remove('h-auto');
+              } else {
+                item.classList.add('faq-item-open');
+                question.classList.add('faq-question-open');
+                content.style.height = content.scrollHeight + 'px';
+                content.classList.add('h-auto');
               }
             });
-            if (isOpen) {
-              item.classList.remove('faq-item-open');
-              question.classList.remove('faq-question-open');
-              content.style.height = '0';
-              content.classList.remove('h-auto');
-            } else {
-              item.classList.add('faq-item-open');
-              question.classList.add('faq-question-open');
-              content.style.height = content.scrollHeight + 'px';
-              content.classList.add('h-auto');
-            }
           });
-        });
-      </script>
-    
+        </script>
+      </div>
 
       <footer class="py-16 bg-[#242424]">
         <div class="flex flex-col md:flex-row items-center md:items-start ml-4 md:ml-12">
